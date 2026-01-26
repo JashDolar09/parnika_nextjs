@@ -1,0 +1,288 @@
+/* ============================================
+   OUR FACTORY STYLES
+   ============================================ */
+
+/* Factory Intro Section */
+
+
+.factory-intro {
+    padding: clamp(3rem, 8vw, 6rem) 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.factory-heading {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+.factory-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--secondary-teal);
+    border-radius: 2px;
+}
+
+.intro-text {
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    line-height: 1.8;
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    text-align-last: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+/* Factory Gallery (Zig-Zag Layout) */
+.factory-gallery {
+    padding: 0 0 clamp(3rem, 8vw, 6rem);
+    background: var(--white);
+}
+
+.gallery-row {
+    display: flex;
+    align-items: center;
+    gap: clamp(2rem, 5vw, 4rem);
+    margin-bottom: clamp(3rem, 5vw, 6rem);
+}
+
+.gallery-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.gallery-content {
+    flex: 1;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.gallery-image-wrapper {
+    flex: 1;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.gallery-img-box {
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(47, 87, 85, 0.15);
+    position: relative;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-img-box:hover .gallery-img {
+    transform: scale(1.05);
+}
+
+.Momo-Signature-fw {
+    font-family: "Momo Signature", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+    color: #df2d68;
+}
+
+.gallery-content h3 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.gallery-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--secondary-teal);
+}
+
+.gallery-content p {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    line-height: 1.7;
+    color: var(--gray);
+}
+
+/* Centered Row (Last Item) */
+.gallery-row.centered {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-row.centered .gallery-content h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gallery-row.centered .gallery-image-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gallery-row.centered .gallery-img-box {
+    aspect-ratio: 16/9;
+    /* Wider for the centered image */
+}
+
+
+/* Animations */
+.animate-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .gallery-row {
+        flex-direction: column !important;
+        /* Stack everything on tablet/mobile */
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .gallery-content h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .intro-text {
+        text-align: left;
+        text-align-last: left;
+    }
+}
+
+/* Map Section */
+.map-section {
+    padding: clamp(3rem, 8vw, 6rem) 0;
+    background: var(--white);
+}
+
+.map-section .section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--primary-dark);
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.map-section .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--secondary-teal);
+    border-radius: 2px;
+}
+
+.map-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.map-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(47, 87, 85, 0.15);
+    height: 450px;
+}
+
+.map-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.map-pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: var(--primary-teal);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+    box-shadow: 0 5px 20px rgba(47, 87, 85, 0.4);
+    pointer-events: none;
+}
+
+.location-brief {
+    max-width: 800px;
+    margin: 2rem auto 0;
+    font-size: 1.1rem;
+    color: var(--gray);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .map-container {
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-container {
+        height: 250px;
+    }
+}
+
+/* Fallback Visibility to prevent White Screen */
+.intro-text,
+.gallery-content,
+.gallery-image-wrapper {
+    opacity: 1 !important;
+    /* Force visible initially */
+    transform: none !important;
+}
+
+/* Animations will be handled by JS adding a class if it loads */

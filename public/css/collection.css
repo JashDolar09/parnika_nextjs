@@ -1,0 +1,1032 @@
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* --primary-dark: #432323; */
+    --primary-dark: #212121;
+    
+    --primary-teal: #2F5755;
+    --secondary-teal: #5A9690;
+    --light-bg: #e6f2f1;
+    --white: #ffffff;
+    --dark: #432323;
+    --gray: #6B6B6B;
+    --footer-color: #2F5755;
+    --bg-light: #E0D9D9;
+    --text-light: #8B8B8B;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    overflow-x: hidden;
+    background: var(--white);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+/* ============================================
+   SCROLL PROGRESS BAR
+   ============================================ */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: var(--secondary-teal);
+    z-index: 10000;
+    transition: width 0.1s ease;
+    box-shadow: 0 2px 10px rgba(90, 150, 144, 0.5);
+}
+
+
+/* ============================================
+   COLLECTION HERO
+   ============================================ */
+.collection-hero {
+    position: relative;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 70px;
+    background: var(--light-bg);
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/image1.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.1;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+    padding: 0 3rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--gray);
+    line-height: 1.8;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* ============================================
+   COLLECTION CATEGORIES
+   ============================================ */
+.collection-categories {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.category-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(47, 87, 85, 0.1);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.category-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.category-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(47, 87, 85, 0.3);
+}
+
+.category-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.category-image {
+    width: 100%;
+    height: 100%;
+    background: var(--light-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.category-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover .category-img {
+    transform: scale(1.1);
+}
+
+.category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(47, 87, 85, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+    transform: translateY(20px);
+}
+
+.category-card:hover .category-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-whatsapp-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    background: #25D366;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    transform: translateY(10px);
+}
+
+.category-card:hover .btn-whatsapp-card {
+    transform: translateY(0);
+}
+
+.btn-whatsapp-card:hover {
+    background: #128C7E;
+    transform: scale(1.05);
+}
+
+.btn-whatsapp-card i {
+    font-size: 1.3rem;
+}
+
+.category-info {
+    padding: 2rem;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.category-card:hover .category-title {
+    color: var(--primary-teal);
+}
+
+.category-description {
+    font-size: 1.1rem;
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.category-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.feature-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--light-bg);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--primary-teal);
+    font-weight: 500;
+}
+
+.feature-tag i {
+    font-size: 0.8rem;
+    color: var(--secondary-teal);
+}
+
+
+/* =============================
+   Form Pop open css 
+   ============================= */
+
+/* Show WhatsApp Button on Hover */
+.category-image-wrapper {
+    position: relative;
+}
+
+.category-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.category-image-wrapper:hover .category-overlay {
+    opacity: 1;
+}
+
+.btn-whatsapp-card {
+    background: #25d366;
+    padding: 10px 18px;
+    color: white;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* =============================
+   POPUP FORM STYLING
+   ============================= */
+
+/* Popup Overlay */
+#popupFormWrapper {
+    display: none; /* hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Flex to center content */
+    display: flex;
+}
+
+/* Popup Box */
+.popup-form-content {
+    background: #fff; /* or var(--light-bg) */
+    padding: 2rem 2.5rem;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 12px;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Close Button */
+.popup-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s ease;
+}
+
+.popup-close:hover {
+    color: #25d366;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+/* Form CSS  */
+
+/* ============================================
+   FIXED: CONTACT FORM STYLING
+   ============================================ */
+
+.contact-form-wrapper {
+    background: var(--light-bg);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(47, 87, 85, 0.1);
+    /* opacity: 0; */
+    /* transform: translateX(50px); */
+}
+
+.form-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    opacity: 1;
+    /* transform: translateY(20px); */
+}
+
+.form-group.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    padding-top: 10px;
+}
+
+.form-group label i {
+    color: var(--primary-teal);
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 1rem;
+    border: 2px solid var(--light-bg);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: var(--white);
+    color: var(--dark);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-teal);
+    box-shadow: 0 0 0 3px rgba(47, 87, 85, 0.1);
+    /* transform: translateY(-2px); */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-light);
+    color: #999;
+    opacity: 0.7;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-submit {
+    background: var(--primary-teal);
+    color: var(--white);
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover {
+    background: var(--secondary-teal);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(47, 87, 85, 0.3);
+}
+
+.btn-submit i {
+    font-size: 1.2rem;
+}
+
+
+
+
+/* Simple Popup Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* ============================================
+   FABRIC & QUALITY SECTION
+   ============================================ */
+.fabric-quality {
+    padding: 6rem 0;
+    background: var(--light-bg);
+}
+
+.fabric-quality h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.fabric-quality h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--secondary-teal);
+    border-radius: 2px;
+}
+
+.fabric-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+}
+
+.fabric-item {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+}
+
+.fabric-item.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.fabric-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(47, 87, 85, 0.2);
+}
+
+.fabric-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--light-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.fabric-item:hover .fabric-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.fabric-icon i {
+    font-size: 2.5rem;
+    color: var(--primary-teal);
+}
+
+.fabric-item h3 {
+    font-size: 1.4rem;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.fabric-item p {
+    color: var(--gray);
+    line-height: 1.7;
+}
+
+/* ============================================
+   COLLECTION CTA
+   ============================================ */
+.collection-cta {
+    padding: 6rem 0;
+    background: var(--primary-teal);
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.cta-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.cta-text {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.cta-title.visible,
+.cta-text.visible,
+.cta-buttons.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.2rem 3rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: var(--white);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 9px 40px rgba(37, 211, 102, 0.4);
+}
+
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: rgb(60, 5, 60);
+    border: 2px solid var(--primary-teal);
+    box-shadow: 0 10px 30px rgba(47, 87, 85, 0.2);
+    transition: all 0.8s ease-in-out;
+}
+
+.btn-secondary:hover {
+    background-color: rgb(60, 5, 60);
+    color: aliceblue;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(47, 87, 85, 0.4);
+}
+
+.btn-secondary.auto-effect {
+    background-color: rgb(60, 5, 60);
+    color: aliceblue;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(47, 87, 85, 0.4);
+    transition: all 0.4s ease;
+}
+
+.btn i {
+    font-size: 1.2rem;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background: var(--footer-color);
+    color: var(--white);
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-info {
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.footer .social-icon {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.footer .social-icon i {
+    font-size: 1.5rem;
+}
+
+.footer .social-icon:hover {
+    /* background: var(--secondary-teal); */
+    background: white;
+    transform: translateY(-5px) scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* ============================================
+   FLOATING WHATSAPP BUTTON
+   ============================================ */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: var(--white);
+}
+
+.floating-whatsapp i {
+    font-size: 2rem;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+}
+
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(50px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-10px);
+    }
+
+    70% {
+        transform: scale(0.9) translateY(5px);
+    }
+
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+    }
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 5px 10px rgba(37, 211, 102, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 7px 13px rgba(37, 211, 102, 0.6), 0 0 14px rgba(37, 211, 102, 0.4);
+    }
+}
+
+.fade-up {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.bounce-in {
+    animation: bounceIn 0.8s ease forwards;
+    opacity: 0;
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.pulse-glow {
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 2rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .categories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .collection-hero {
+        margin-top: 60px;
+        min-height: 40vh;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .collection-categories,
+    .fabric-quality,
+    .collection-cta {
+        padding: 4rem 0;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .fabric-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+    }
+
+    .cta-title {
+        font-size: 2rem;
+    }
+
+    .cta-text {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    .floating-whatsapp {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .fabric-quality h2 {
+        font-size: 2rem;
+    }
+
+    .cta-title {
+        font-size: 1.8rem;
+    }
+
+    .category-info {
+        padding: 1.5rem;
+    }
+
+    .category-title {
+        font-size: 1.5rem;
+    }
+
+    .category-description {
+        font-size: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
