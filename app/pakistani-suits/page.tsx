@@ -1,0 +1,43 @@
+import type { Metadata } from 'next';
+import { Gallery } from '@/components/Gallery';
+import { pakistaniSuitsImages } from '@/app/data/pakistani_suits';
+
+export const metadata: Metadata = {
+    title: 'Our Collection - Pakistani Suits | Parnika',
+};
+
+export default function PakistaniSuits() {
+    return (
+        <>
+            <link rel="stylesheet" href="/css/seemore.css" />
+            <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&family=Satisfy&display=swap" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+
+            <section className="collection-hero" id="collectionHero">
+                <div className="hero-background"></div>
+                <div className="hero-content">
+                    <h1 className="hero-title fade-in-up satisfy-regular">Exquisite Pakistani Suits – Elegance Redeined</h1>
+                </div>
+            </section>
+
+            <p className="hero-subtitle fade-in-up ubuntu-regular">Discover our stunning collection of Pakistani suits, featuring intricate embroidery, rich fabrics, and a perfect blend of tradition and modern flair.</p>
+
+            <Gallery images={pakistaniSuitsImages} />
+
+            <section className="collection-cta" id="collectionCta">
+                <div className="container">
+                    <h2 className="cta-title fade-in-up">Ready to Explore Our Collections?</h2>
+                    <p className="cta-text fade-in-up">Contact us for retail purchases, wholesale orders, or franchise opportunities.</p>
+                    <div className="cta-buttons fade-in-up">
+                        <a href="https://wa.me/917590048900" className="btn btn-whatsapp pulse-glow" target="_blank">
+                            <i className="fab fa-whatsapp"></i> WhatsApp to Order
+                        </a>
+                        <a href="/contact" className="btn btn-secondary">
+                            <i className="fas fa-envelope"></i> Contact Us
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </>
+    );
+}

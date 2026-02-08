@@ -1,5 +1,6 @@
-import Script from 'next/script';
 import type { Metadata } from 'next';
+import { Gallery } from '@/components/Gallery';
+import { kurtaSetImages } from '@/app/data/kurta_set';
 
 export const metadata: Metadata = {
     title: 'Our Collection - Kurta Sets | Parnika',
@@ -22,13 +23,7 @@ export default function KurtaSet() {
             <p className="hero-subtitle fade-in-up ubuntu-regular">Our kurta sets blend tradition and style, designed to bring out
                 your grace, confidence and timeless beauty.</p>
 
-            <div className="gallery-main">
-                <ul id="galleryList" data-caption="Premium Kurta Set"></ul>
-            </div>
-
-            <div className="load-more-container">
-                <button className="ubuntu-regular" id="loadMoreBtn">Load More</button>
-            </div>
+            <Gallery images={kurtaSetImages} />
 
             <section className="collection-cta" id="collectionCta">
                 <div className="container">
@@ -44,9 +39,6 @@ export default function KurtaSet() {
                     </div>
                 </div>
             </section>
-
-            <Script src="/js/kurta_set_images.js" strategy="lazyOnload" />
-            <Script src="/js/see_more_common.js" strategy="lazyOnload" />
         </>
     );
 }

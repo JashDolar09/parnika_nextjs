@@ -88,19 +88,20 @@ Hero Section
 
 .hero-slideshow {
     width: 100%;
+    position: relative;
 }
 
 .hero-slide {
     width: 100%;
     height: auto;
     /* 🔥 THIS IS THE KEY */
-    display: none;
+    display: none !important;
     position: relative;
     top: 5px;
 }
 
 .hero-slide.active {
-    display: block;
+    display: block !important;
 }
 
 .hero-container {
@@ -652,117 +653,6 @@ Hero Section
 
 
 /* ============================================
-   FOOTER
-   ============================================ */
-
-.footer {
-    background-image: url('../images/background-footer1.png');
-    width: 100%;
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    color: var(--white);
-    padding: 4rem 0 2rem;
-    box-sizing: border-box;
-}
-
-@media (max-width: 768px) {
-    .footer {
-        background-position: center center;
-        padding: 3rem 0 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer {
-        background-size: auto 100%;
-        padding: 2.5rem 0 1rem;
-    }
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 3rem;
-    margin-bottom: 2rem;
-}
-
-.footer-section h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    /* color: var(--white); */
-    color: black;
-}
-
-.footer-section ul {
-    list-style: none;
-}
-
-.footer-section ul li {
-    margin-bottom: 0.8rem;
-}
-
-.footer-section a {
-    /* color: rgba(255, 255, 255, 0.8); */
-    color: black;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.footer-info {
-    color: rgba(255, 255, 255, 0.8);
-    margin-top: 1rem;
-    font-size: 0.9rem;
-}
-
-.footer .social-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-.footer .social-icon {
-    width: 45px;
-    height: 45px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    color: var(--white);
-}
-
-.footer .social-icon i {
-    font-size: 1.5rem;
-}
-
-.footer .social-icon:hover {
-    /* background: var(--secondary-teal); */
-    background: white;
-    transform: translateY(-5px) scale(1.1);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.8);
-}
-
-
-/* ============================================
    FLOATING WHATSAPP BUTTON
    ============================================ */
 
@@ -1194,7 +1084,7 @@ button,
    ============================================ */
 
 img {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s;
 }
 

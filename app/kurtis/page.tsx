@@ -1,5 +1,6 @@
-import Script from 'next/script';
 import type { Metadata } from 'next';
+import { Gallery } from '@/components/Gallery';
+import { kurtiImages } from '@/app/data/kurtis';
 
 export const metadata: Metadata = {
     title: 'Our Collection - Kurti | Parnika',
@@ -22,13 +23,7 @@ export default function Kurtis() {
             <p className="hero-subtitle fade-in-up ubuntu-regular">Experience style and comfort in every piece of our Kurta set collection,
                 meticulously designed to give you a modern yet timeless look.</p>
 
-            <div className="gallery-main">
-                <ul id="galleryList" data-caption="Premium Kurti"></ul>
-            </div>
-
-            <div className="load-more-container">
-                <button className="ubuntu-regular" id="loadMoreBtn">Load More</button>
-            </div>
+            <Gallery images={kurtiImages} />
 
             <section className="collection-cta" id="collectionCta">
                 <div className="container">
@@ -44,9 +39,6 @@ export default function Kurtis() {
                     </div>
                 </div>
             </section>
-
-            <Script src="/js/kurti_images.js" strategy="lazyOnload" />
-            <Script src="/js/see_more_common.js" strategy="lazyOnload" />
         </>
     );
 }

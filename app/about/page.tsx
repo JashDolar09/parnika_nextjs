@@ -103,7 +103,12 @@ export default function About() {
                         </div>
                         <div className="story-image fade-in-right">
                             <div className="about-img-box">
-                                <img src="/images/product/about/parnika_building.png" alt="About Image" loading="lazy" className="about-img" />
+                                <img
+                                    src="/images/product/about/parnika_building.png"
+                                    alt="About Image"
+                                    className="about-img"
+                                    style={{ width: '100%', height: 'auto' }}
+                                />
                             </div>
                         </div>
                     </div>
@@ -155,10 +160,20 @@ export default function About() {
                         </div>
                         <div className="manufacturing-image fade-in-right">
                             <div className="about-img-box">
-                                <img src="/images/product/about/about 1.jpg" alt="Manufacturing 1" loading="lazy" className="about-img-manu" />
+                                <img
+                                    src="/images/product/about/about%201.jpg"
+                                    alt="Manufacturing 1"
+                                    className="about-img-manu"
+                                    style={{ width: '100%', height: 'auto' }}
+                                />
                             </div>
                             <div className="about-img-box">
-                                <img src="/images/product/about/about 4.jpg" alt="Manufacturing 2" loading="lazy" className="about-img-manu" />
+                                <img
+                                    src="/images/product/about/about%204.jpg"
+                                    alt="Manufacturing 2"
+                                    className="about-img-manu"
+                                    style={{ width: '100%', height: 'auto' }}
+                                />
                             </div>
                         </div>
                     </div>

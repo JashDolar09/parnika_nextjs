@@ -208,28 +208,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ============================================
-// LAZY LOADING IMAGES
-// ============================================
-const lazyImages = document.querySelectorAll('img');
-const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const img = entry.target;
-            if (img.dataset.src) {
-                img.src = img.dataset.src;
-            }
-            img.classList.add('loaded');
-            imageObserver.unobserve(img);
-        }
-    });
-});
 
-lazyImages.forEach(img => {
-    if (!img.classList.contains('loaded')) {
-        imageObserver.observe(img);
-    }
-});
 
 // ============================================
 // PAGE TRANSITION FADE

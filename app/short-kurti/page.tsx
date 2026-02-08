@@ -1,5 +1,6 @@
-import Script from 'next/script';
 import type { Metadata } from 'next';
+import { Gallery } from '@/components/Gallery';
+import { shortKurtiImages } from '@/app/data/short_kurti';
 
 export const metadata: Metadata = {
     title: 'Our Collection - Short Kurtis | Parnika',
@@ -22,13 +23,7 @@ export default function ShortKurti() {
             <p className="hero-subtitle fade-in-up ubuntu-regular">Our short kurtis blend tradition and style, designed to bring out
                 your grace, confidence and timeless beauty.</p>
 
-            <div className="gallery-main">
-                <ul id="galleryList" data-caption="Premium Short Kurti"></ul>
-            </div>
-
-            <div className="load-more-container">
-                <button className="ubuntu-regular" id="loadMoreBtn">Load More</button>
-            </div>
+            <Gallery images={shortKurtiImages} />
 
             <section className="collection-cta" id="collectionCta">
                 <div className="container">
@@ -44,9 +39,6 @@ export default function ShortKurti() {
                     </div>
                 </div>
             </section>
-
-            <Script src="/js/short_kurti_images.js" strategy="lazyOnload" />
-            <Script src="/js/see_more_common.js" strategy="lazyOnload" />
         </>
     );
 }

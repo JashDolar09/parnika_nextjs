@@ -1,5 +1,6 @@
-import Script from 'next/script';
 import type { Metadata } from 'next';
+import { Gallery } from '@/components/Gallery';
+import { deliverySareeImages } from '@/app/data/delivery_saree';
 
 export const metadata: Metadata = {
     title: 'Our Collection - Delivery Saree | Parnika',
@@ -23,13 +24,7 @@ export default function DeliverySaree() {
                 meets modern elegance each piece thoughtfully crafted to enhance your beauty, elevate your style and give you a
                 touch of timeless sophistication.</p>
 
-            <div className="gallery-main">
-                <ul id="galleryList" data-caption="Delivery Saree"></ul>
-            </div>
-
-            <div className="load-more-container">
-                <button className="ubuntu-regular" id="loadMoreBtn">Load More</button>
-            </div>
+            <Gallery images={deliverySareeImages} />
 
             <section className="collection-cta" id="collectionCta">
                 <div className="container">
@@ -45,9 +40,6 @@ export default function DeliverySaree() {
                     </div>
                 </div>
             </section>
-
-            <Script src="/js/delivery_saree.js" strategy="lazyOnload" />
-            <Script src="/js/see_more_common.js" strategy="lazyOnload" />
         </>
     );
 }

@@ -54,7 +54,11 @@ export default function ParnikaFranchises() {
                         </ul>
                         {/* Image */}
                         <div className="why-img-box">
-                            <img src="/images/frenchises_image.png" alt="Parnika Store Front" />
+                            <img
+                                src="/images/frenchises_image.png"
+                                alt="Parnika Store Front"
+                                style={{ width: '100%', height: 'auto' }}
+                            />
                         </div>
                     </div>
                 </div>
@@ -66,13 +70,25 @@ export default function ParnikaFranchises() {
                     <h2 className="section-title">Inside <span className="Momo-Signature-word">Our</span> Franchise Layout</h2>
                     <div className="presence-grid">
                         <div className="presence-item">
-                            <img src="/images/product/frenchise/frenchise_layout_1.png" alt="Showroom Interior" />
+                            <img
+                                src="/images/product/frenchise/frenchise_layout_1.png"
+                                alt="Showroom Interior"
+                                style={{ width: '100%', height: '100%' }}
+                            />
                         </div>
                         <div className="presence-item">
-                            <img src="/images/product/frenchise/frenchise_layout_2.png" alt="Product Display" />
+                            <img
+                                src="/images/product/frenchise/frenchise_layout_2.png"
+                                alt="Product Display"
+                                style={{ width: '100%', height: '100%' }}
+                            />
                         </div>
                         <div className="presence-item">
-                            <img src="/images/product/frenchise/frenchise_layout_3.png" alt="Store Branding" />
+                            <img
+                                src="/images/product/frenchise/frenchise_layout_3.png"
+                                alt="Store Branding"
+                                style={{ width: '100%', height: '100%' }}
+                            />
                         </div>
                     </div>
                 </div>
@@ -145,7 +161,12 @@ export default function ParnikaFranchises() {
                 <div className="container">
                     <h2 className="section-title">Franchise Comparison</h2>
                     <div className="comparison-image-container">
-                        <img src="/images/product/frenchise/frachise_compressed.jpg" alt="Franchise Comparison" className="comparison-img" />
+                        <img
+                            src="/images/product/frenchise/frachise_compressed.jpg"
+                            alt="Franchise Comparison"
+                            className="comparison-img"
+                            style={{ width: '100%', height: 'auto' }}
+                        />
                     </div>
                     <p className="text-center mt-3" style={{ color: 'var(--gray)', marginTop: '2rem' }}>
                         * All models include No Royalty Fee and 5 KM Exclusivity Radius.

@@ -31,7 +31,11 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img src="/images/product/saree/saree 2.webp" alt="Premium Sarees" className="category-img" />
+                                    <img
+                                        src="/images/product/saree/saree%202.webp"
+                                        alt="Premium Sarees"
+                                        className="category-img"
+                                    />
                                 </div>
                                 <div className="category-overlay">
                                     <a href="https://wa.me/917590048900" className="btn-whatsapp-card" target="_blank">
@@ -56,7 +60,11 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img src="/images/product/lehenga/Lehenga 13.webp" alt="Party & Bridal Gowns" className="category-img" />
+                                    <img
+                                        src="/images/product/lehenga/Lehenga%2013.webp"
+                                        alt="Party & Bridal Gowns"
+                                        className="category-img"
+                                    />
                                 </div>
                                 <div className="category-overlay">
                                     <a href="https://wa.me/917590048900" className="btn-whatsapp-card" target="_blank">
@@ -81,7 +89,11 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img src="/images/product/kurti/image_collection.webp" alt="Stylish Kurtis" className="category-img" />
+                                    <img
+                                        src="/images/product/kurti/image_collection.webp"
+                                        alt="Stylish Kurtis"
+                                        className="category-img"
+                                    />
                                 </div>
                                 <div className="category-overlay">
                                     <a href="https://wa.me/917590048900" className="btn-whatsapp-card" target="_blank">
@@ -106,7 +118,11 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img src="/images/product/suits/image_collection.webp" alt="Designer Suits" className="category-img" />
+                                    <img
+                                        src="/images/product/suits/image_collection.webp"
+                                        alt="Designer Suits"
+                                        className="category-img"
+                                    />
                                 </div>
                                 <div className="category-overlay">
                                     <a href="https://wa.me/917590048900" className="btn-whatsapp-card" target="_blank">
@@ -127,11 +143,44 @@ export default function Collection() {
                             </div>
                         </div>
 
+                        {/* Pakistani Suits */}
+                        <div className="category-card fade-up">
+                            <div className="category-image-wrapper">
+                                <div className="category-image">
+                                    <img
+                                        src="/images/product/pakistani_suits/Pakistani suit 1.webp"
+                                        alt="Pakistani Suits"
+                                        className="category-img"
+                                    />
+                                </div>
+                                <div className="category-overlay">
+                                    <a href="https://wa.me/917590048900" className="btn-whatsapp-card" target="_blank">
+                                        <i className="fab fa-whatsapp"></i> WhatsApp to Order
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="category-info">
+                                <h3 className="category-title">Pakistani Suits</h3>
+                                <p className="category-description">
+                                    Exquisite designs with rich cultural heritage, featuring heavy embroidery and luxurious fabrics
+                                </p>
+                                <div className="category-features">
+                                    <span className="feature-tag"><i className="fas fa-check"></i> Regally Crafted</span>
+                                    <span className="feature-tag"><i className="fas fa-check"></i> Luxurious </span>
+                                    <span className="feature-tag"><i className="fa-solid fa-angles-right"></i> <a href="/pakistani-suits" className="see-more-link">Explore Collection</a></span>
+                                </div>
+                            </div>
+                        </div>
+
                         {/* Delivery Saree */}
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img src="/images/product/saree/saree 3.webp" alt="Delivery Saree" className="category-img" />
+                                    <img
+                                        src="/images/product/delivery_saree/Delivery_Saree 1.webp"
+                                        alt="Delivery Saree"
+                                        className="category-img"
+                                    />
                                 </div>
                                 <div className="category-overlay">
                                     <a href="https://wa.me/917590048900" className="btn-whatsapp-card" target="_blank">
@@ -156,7 +205,11 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img src="/images/product/saree/saree 5.webp" alt="Silk Saree" className="category-img" />
+                                    <img
+                                        src="/images/product/saree/saree%205.webp"
+                                        alt="Silk Saree"
+                                        className="category-img"
+                                    />
                                 </div>
                                 <div className="category-overlay">
                                     <a href="https://wa.me/917590048900" className="btn-whatsapp-card" target="_blank">
@@ -181,7 +234,11 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img src="/images/product/festive_season/festive_season 2.webp" alt="Festive Season" className="category-img" />
+                                    <img
+                                        src="/images/product/festive_season/festive_season%202.webp"
+                                        alt="Festive Season"
+                                        className="category-img"
+                                    />
                                 </div>
                                 <div className="category-overlay">
                                     <a href="https://wa.me/917590048900" className="btn-whatsapp-card" target="_blank">
@@ -206,7 +263,11 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img src="/images/product/coat_set/coat_set 3.webp" alt="Coat Set" className="category-img" />
+                                    <img
+                                        src="/images/product/coat_set/coat_set%203.webp"
+                                        alt="Coat Set"
+                                        className="category-img"
+                                    />
                                 </div>
                                 <div className="category-overlay">
                                     <a href="https://wa.me/917590048900" className="btn-whatsapp-card" target="_blank">
@@ -231,7 +292,11 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img src="/images/product/kurta_set/kurta_set 4.webp" alt="Kurta Set" className="category-img" />
+                                    <img
+                                        src="/images/product/kurta_set/kurta_set%204.webp"
+                                        alt="Kurta Set"
+                                        className="category-img"
+                                    />
                                 </div>
                                 <div className="category-overlay">
                                     <a href="https://wa.me/917590048900" className="btn-whatsapp-card" target="_blank">
@@ -256,7 +321,11 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img src="/images/product/salwar_kameez/salwar_kameez 2.webp" alt="Salwar Kameez" className="category-img" />
+                                    <img
+                                        src="/images/product/salwar_kameez/salwar_kameez%202.webp"
+                                        alt="Salwar Kameez"
+                                        className="category-img"
+                                    />
                                 </div>
                                 <div className="category-overlay">
                                     <a href="https://wa.me/917590048900" className="btn-whatsapp-card" target="_blank">
@@ -281,7 +350,11 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img src="/images/product/short_kurti/short_kurti 2.webp" alt="Short Kurti" className="category-img" />
+                                    <img
+                                        src="/images/product/short_kurti/short_kurti%202.webp"
+                                        alt="Short Kurti"
+                                        className="category-img"
+                                    />
                                 </div>
                                 <div className="category-overlay">
                                     <a href="https://wa.me/917590048900" className="btn-whatsapp-card" target="_blank">
@@ -306,7 +379,11 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img src="/images/product/top/top 1.webp" alt="Girls Top" className="category-img" />
+                                    <img
+                                        src="/images/product/top/top%201.webp"
+                                        alt="Girls Top"
+                                        className="category-img"
+                                    />
                                 </div>
                                 <div className="category-overlay">
                                     <a href="https://wa.me/917590048900" className="btn-whatsapp-card" target="_blank">

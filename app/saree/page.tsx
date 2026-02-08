@@ -1,5 +1,6 @@
-import Script from 'next/script';
 import type { Metadata } from 'next';
+import { Gallery } from '@/components/Gallery';
+import { sareeImages } from '@/app/data/sarees';
 
 export const metadata: Metadata = {
     title: 'Our Collection - Saree | Parnika',
@@ -23,36 +24,7 @@ export default function Saree() {
                 meets modern elegance each piece thoughtfully crafted to enhance your beauty, elevate your style and give you a
                 touch of timeless sophistication.</p>
 
-            <div className="gallery-main">
-                <ul className="gallery-list" id="galleryList">
-                    <li><figure><img src="/images/product/saree/saree 1.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 2.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 3.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 4.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 5.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 6.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 7.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 8.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 9.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 10.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 11.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 12.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 13.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 14.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 15.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 16.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 17.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 18.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 19.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 20.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 21.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                    <li><figure><img src="/images/product/saree/saree 22.webp" alt="Premium Saree" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Premium Saree</figcaption></figure></li>
-                </ul>
-            </div>
-
-            <div className="load-more-container">
-                <button className="ubuntu-regular" id="loadMoreBtn">Load More</button>
-            </div>
+            <Gallery images={sareeImages} />
 
             <section className="collection-cta" id="collectionCta">
                 <div className="container">
@@ -68,8 +40,6 @@ export default function Saree() {
                     </div>
                 </div>
             </section>
-
-            <Script src="/js/see_more_common.js" strategy="lazyOnload" />
         </>
     );
 }

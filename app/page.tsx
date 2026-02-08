@@ -8,8 +8,18 @@ export default function Home() {
       {/* Hero Banner */}
       <section className="hero" id="hero">
         <div className="hero-slideshow">
-          <img src="/images/product/home/wb 4.png" className="hero-slide active" alt="" />
-          <img src="/images/product/home/wb 5.png" className="hero-slide" alt="" />
+          <img
+            src="/images/product/home/wb%204.png"
+            className="hero-slide active"
+            alt="Hero Banner 1"
+            style={{ width: '100%', height: 'auto' }}
+          />
+          <img
+            src="/images/product/home/wb%205.png"
+            className="hero-slide"
+            alt="Hero Banner 2"
+            style={{ width: '100%', height: 'auto' }}
+          />
         </div>
         <div className="hero-container"></div>
       </section>
@@ -37,7 +47,11 @@ export default function Home() {
           <div className="categories-grid">
             <div className="category-card zoom-in">
               <div className="category-image">
-                <img src="/images/product/delivery_saree/Delivery_Saree 15.webp" alt="Premium Sarees" className="category-img" />
+                <img
+                  src="/images/product/delivery_saree/Delivery_Saree 1.webp"
+                  alt="Premium Sarees"
+                  className="category-img"
+                />
               </div>
               <h3 className="category-title">Delivery Sarees</h3>
               <p className="category-desc">Swift doorstep drapes curated elegance</p>
@@ -45,7 +59,11 @@ export default function Home() {
 
             <div className="category-card zoom-in">
               <div className="category-image">
-                <img src="/images/product/saree/saree 1.webp" alt="Premium Sarees" className="category-img" />
+                <img
+                  src="/images/product/saree/saree%201.webp"
+                  alt="Premium Sarees"
+                  className="category-img"
+                />
               </div>
               <h3 className="category-title">Premium Sarees</h3>
               <p className="category-desc">Luxurious weaves artisanal heritage finesse</p>
@@ -53,7 +71,11 @@ export default function Home() {
 
             <div className="category-card zoom-in">
               <div className="category-image">
-                <img src="/images/product/suits/image_home.webp" alt="Designer Suits" className="category-img" />
+                <img
+                  src="/images/product/suits/image_home.webp"
+                  alt="Designer Suits"
+                  className="category-img"
+                />
               </div>
               <h3 className="category-title">Designer Suits</h3>
               <p className="category-desc">Modern cuts elevate signature suits</p>
@@ -61,7 +83,23 @@ export default function Home() {
 
             <div className="category-card zoom-in">
               <div className="category-image">
-                <img src="/images/product/kurti/image_collection.webp" alt="Stylish Kurtis" className="category-img" />
+                <img
+                  src="/images/product/pakistani_suits/Pakistani suit 1.webp"
+                  alt="Pakistani Suits"
+                  className="category-img"
+                />
+              </div>
+              <h3 className="category-title">Pakistani Suits</h3>
+              <p className="category-desc">Regal cultural heritage exquisite craftsmanship</p>
+            </div>
+
+            <div className="category-card zoom-in">
+              <div className="category-image">
+                <img
+                  src="/images/product/kurti/image_collection.webp"
+                  alt="Stylish Kurtis"
+                  className="category-img"
+                />
               </div>
               <h3 className="category-title">Stylish Kurtis</h3>
               <p className="category-desc">Efffortless everyday silhouettes vibrant comfort</p>
@@ -69,7 +107,11 @@ export default function Home() {
 
             <div className="category-card zoom-in">
               <div className="category-image">
-                <img src="/images/product/salwar_kameez/salwar_kameez 23.webp" alt="Party & Bridal Gowns" className="category-img" />
+                <img
+                  src="/images/product/salwar_kameez/salwar_kameez%2023.webp"
+                  alt="Party & Bridal Gowns"
+                  className="category-img"
+                />
               </div>
               <h3 className="category-title">salwar kameez</h3>
               <p className="category-desc">Regal flowing salwar kameez exquisite craftsmanship</p>
@@ -77,7 +119,11 @@ export default function Home() {
 
             <div className="category-card zoom-in">
               <div className="category-image">
-                <img src="/images/product/lehenga/Lehenga 15.webp" alt="Wholesale Lots" className="category-img" />
+                <img
+                  src="/images/product/lehenga/Lehenga%2015.webp"
+                  alt="Wholesale Lots"
+                  className="category-img"
+                />
               </div>
               <h3 className="category-title">Elegant Lehenga</h3>
               <p className="category-desc">Grand lehengas crafted for celebrations</p>
@@ -85,7 +131,11 @@ export default function Home() {
 
             <div className="category-card zoom-in">
               <div className="category-image">
-                <img src="/images/product/home/fabric_saree.png" alt="Franchise Opportunities" className="category-img" />
+                <img
+                  src="/images/product/home/fabric_saree.png"
+                  alt="Franchise Opportunities"
+                  className="category-img"
+                />
               </div>
               <h3 className="category-title">Fabric</h3>
               <p className="category-desc">Premium textiles versatile textures enduring quality</p>
@@ -93,7 +143,11 @@ export default function Home() {
 
             <div className="category-card zoom-in">
               <div className="category-image">
-                <img src="/images/product/festive_season/festive_season 3.webp" alt="Indo-Western" className="category-img" />
+                <img
+                  src="/images/product/festive_season/festive_season%203.webp"
+                  alt="Indo-Western"
+                  className="category-img"
+                />
               </div>
               <h3 className="category-title">Indo-Western</h3>
               <p className="category-desc">Fusion aesthetics global flair modernity</p>
@@ -101,7 +155,11 @@ export default function Home() {
 
             <div className="category-card zoom-in">
               <div className="category-image">
-                <img src="/images/product/coat_set/coat_set 5.webp" alt="Coat-Set" className="category-img" />
+                <img
+                  src="/images/product/coat_set/coat_set%205.webp"
+                  alt="Coat-Set"
+                  className="category-img"
+                />
               </div>
               <h3 className="category-title">Coat-Set</h3>
               <p className="category-desc">Sharp structured layering power dressing</p>
@@ -213,34 +271,71 @@ export default function Home() {
           <div className="last-part-content">
             <h2 className="section-title"><span className="Momo-Signature-word">See Our </span>Curated Collection</h2>
             <div className="last-images-wrapper">
-              <img src="/images/product/home/home 1.jpeg" alt="load-wait" className="last-image" />
-              <img src="/images/product/home/home 2.jpeg" alt="load-wait" className="last-image" />
-              <img src="/images/product/home/home 3.jpeg" alt="load-wait" className="last-image" />
-              <img src="/images/product/home/home 4.jpeg" alt="load-wait" className="last-image" />
-              <img src="/images/product/home/home 5.jpeg" alt="load-wait" className="last-image" />
-              <img src="/images/product/home/home 6.jpeg" alt="load-wait" className="last-image" />
-              <img src="/images/product/home/home 7.jpeg" alt="load-wait" className="last-image" />
+              <img
+                src="/images/product/home/home%201.jpeg"
+                alt="load-wait"
+                className="last-image"
+              />
+              <img
+                src="/images/product/home/home%202.jpeg"
+                alt="load-wait"
+                className="last-image"
+              />
+              <img
+                src="/images/product/home/home%203.jpeg"
+                alt="load-wait"
+                className="last-image"
+              />
+              <img
+                src="/images/product/home/home%204.jpeg"
+                alt="load-wait"
+                className="last-image"
+              />
+              <img
+                src="/images/product/home/home%205.jpeg"
+                alt="load-wait"
+                className="last-image"
+              />
+              <img
+                src="/images/product/home/home%206.jpeg"
+                alt="load-wait"
+                className="last-image"
+              />
+              <img
+                src="/images/product/home/home%207.jpeg"
+                alt="load-wait"
+                className="last-image"
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* Inline script for hero slideshow */}
-      <Script id="hero-slideshow" strategy="lazyOnload">
+      <Script id="hero-slideshow" strategy="afterInteractive">
         {`
-          const slides = document.querySelectorAll('.hero-slide');
-          let current = 0;
+          (function() {
+            const slides = document.querySelectorAll('.hero-slide');
+            if (slides.length === 0) return;
+            
+            let current = 0;
+            // Ensure first slide is active immediately
+            slides.forEach((s, i) => {
+              if (i === 0) s.classList.add('active');
+              else s.classList.remove('active');
+            });
 
-          setInterval(() => {
-            slides[current].classList.remove('active');
-            current = (current + 1) % slides.length;
-            slides[current].classList.add('active');
-          }, 6000);
+            setInterval(() => {
+              slides[current].classList.remove('active');
+              current = (current + 1) % slides.length;
+              slides[current].classList.add('active');
+            }, 6000);
+          })();
         `}
       </Script>
 
       {/* Page-specific JavaScript */}
-      <Script src="/js/home.js" strategy="lazyOnload" />
+      <Script src="/js/home.js" strategy="afterInteractive" />
     </>
   );
 }

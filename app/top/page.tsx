@@ -1,5 +1,6 @@
-import Script from 'next/script';
 import type { Metadata } from 'next';
+import { Gallery } from '@/components/Gallery';
+import { topImages } from '@/app/data/top';
 
 export const metadata: Metadata = {
     title: 'Our Collection - Tops | Parnika',
@@ -22,13 +23,7 @@ export default function Top() {
             <p className="hero-subtitle fade-in-up ubuntu-regular">Our tops blend tradition and style, designed to bring out
                 your grace, confidence and timeless beauty.</p>
 
-            <div className="gallery-main">
-                <ul id="galleryList" data-caption="Premium Top"></ul>
-            </div>
-
-            <div className="load-more-container">
-                <button className="ubuntu-regular" id="loadMoreBtn">Load More</button>
-            </div>
+            <Gallery images={topImages} />
 
             <section className="collection-cta" id="collectionCta">
                 <div className="container">
@@ -44,9 +39,6 @@ export default function Top() {
                     </div>
                 </div>
             </section>
-
-            <Script src="/js/top_images.js" strategy="lazyOnload" />
-            <Script src="/js/see_more_common.js" strategy="lazyOnload" />
         </>
     );
 }

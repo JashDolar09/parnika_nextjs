@@ -64,7 +64,12 @@ export default function OurFactory() {
                         </div>
                         <div className="gallery-image-wrapper">
                             <div className="gallery-img-box">
-                                <img src="/images/product/factory/saree-weaving-1.jpg" alt="Saree Production" className="gallery-img" />
+                                <img
+                                    src="/images/product/factory/saree-weaving-1.jpg"
+                                    alt="Saree Production"
+                                    className="gallery-img"
+                                    style={{ width: '100%', height: 'auto' }}
+                                />
                             </div>
                         </div>
                     </div>
@@ -82,7 +87,12 @@ export default function OurFactory() {
                         </div>
                         <div className="gallery-image-wrapper">
                             <div className="gallery-img-box">
-                                <img src="/images/product/factory/saree-weaving-5.png" alt="Precision Printing" className="gallery-img" />
+                                <img
+                                    src="/images/product/factory/saree-weaving-5.png"
+                                    alt="Precision Printing"
+                                    className="gallery-img"
+                                    style={{ width: '100%', height: 'auto' }}
+                                />
                             </div>
                         </div>
                     </div>
@@ -100,7 +110,12 @@ export default function OurFactory() {
                         </div>
                         <div className="gallery-image-wrapper">
                             <div className="gallery-img-box">
-                                <img src="/images/product/factory/saree-weaving-6.png" alt="Quality Control" className="gallery-img" />
+                                <img
+                                    src="/images/product/factory/saree-weaving-6.png"
+                                    alt="Quality Control"
+                                    className="gallery-img"
+                                    style={{ width: '100%', height: 'auto' }}
+                                />
                             </div>
                         </div>
                     </div>

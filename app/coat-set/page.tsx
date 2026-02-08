@@ -1,5 +1,6 @@
-import Script from 'next/script';
 import type { Metadata } from 'next';
+import { Gallery } from '@/components/Gallery';
+import { coatSetImages } from '@/app/data/coat_set';
 
 export const metadata: Metadata = {
     title: 'Our Collection - Coat Set | Parnika',
@@ -22,36 +23,7 @@ export default function CoatSet() {
             <p className="hero-subtitle fade-in-up ubuntu-regular">Step out in a coat set designed to elevate your presence soft in
                 feel, strong in style and thoughtfully made to keep you warm while bringing out your natural grace.</p>
 
-            <div className="gallery-main">
-                <ul className="gallery-list" id="galleryList" data-caption="Coat Set">
-                    <li><figure><img src="/images/product/coat_set/coat_set 1.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 2.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 3.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 4.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 5.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 6.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 7.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 8.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 9.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 10.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 11.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 12.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 13.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 14.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 15.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 16.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 17.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 18.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 19.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 20.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 21.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                    <li><figure><img src="/images/product/coat_set/coat_set 22.webp" alt="Coat Set" loading="lazy" decoding="async" width="300" height="420" /><figcaption>Coat Set</figcaption></figure></li>
-                </ul>
-            </div>
-
-            <div className="load-more-container">
-                <button className="ubuntu-regular" id="loadMoreBtn">Load More</button>
-            </div>
+            <Gallery images={coatSetImages} />
 
             <section className="collection-cta" id="collectionCta">
                 <div className="container">
@@ -67,8 +39,6 @@ export default function CoatSet() {
                     </div>
                 </div>
             </section>
-
-            <Script src="/js/see_more_common.js" strategy="lazyOnload" />
         </>
     );
 }
