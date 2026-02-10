@@ -1,141 +1,788 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
 
-  --text-primary: #000;
-  --text-secondary: #666;
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+  box-sizing: border-box;
+}
 
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
+.textCenter {
+  text-align: center;
+}
 
+/* ================================
+Hero Section 
+================================ */
+
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  max-height: 95svh
+}
+
+.heroSlideshow {
+  width: 100%;
+  position: relative;
+}
+
+.heroSlide {
+  width: 100%;
+  height: auto;
+  display: none !important;
+  position: relative;
+  top: 5px;
+}
+
+.heroSlide.active {
+  display: block !important;
+}
+
+.heroContainer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
   display: flex;
-  min-height: 100vh;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  pointer-events: none;
 }
 
-.main {
+.btnGroup {
   display: flex;
-  min-height: 100vh;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+  max-width: 100%;
 }
 
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
-}
-
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
+.btn {
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  text-decoration: none;
+  border-radius: 50px;
   font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
-}
-
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
-}
-
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.ctas {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
-}
-
-.ctas a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
+  font-size: 1.1rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  border: none;
   cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
 }
 
-a.secondary {
-  border-color: var(--button-secondary-border);
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
+.btnPrimary {
+  background: var(--primary-teal);
+  color: var(--white);
+  box-shadow: 0 10px 30px rgba(47, 87, 85, 0.3);
+}
+
+.btnPrimary:hover {
+  background: var(--secondary-teal);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(47, 87, 85, 0.4);
+}
+
+.btnSecondary {
+  background-color: #ffffff;
+  color: rgb(60, 5, 60);
+  border: 2px solid var(--primary-teal);
+  box-shadow: 0 10px 30px rgba(47, 87, 85, 0.2);
+  transition: all 0.8s ease-in-out;
+}
+
+.btnSecondary:hover {
+  background-color: rgb(60, 5, 60);
+  color: aliceblue;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(47, 87, 85, 0.4);
+}
+
+/* Button Varieties */
+.btnSecondary.autoEffect {
+  background-color: rgb(60, 5, 60);
+  color: aliceblue;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(47, 87, 85, 0.4);
+  transition: all 0.4s ease;
+}
+
+.btnWhatsapp {
+  background: #25D366;
+  color: var(--white);
+  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.3);
+}
+
+.btnWhatsapp:hover {
+  background: #20BA56;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 9px 40px rgba(37, 211, 102, 0.4);
+  color: var(--white);
+}
+
+/* ============================================
+   ABOUT PREVIEW SECTION
+   ============================================ */
+
+.MomoSignatureWord {
+  font-family: "Momo Signature", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3rem;
+  color: #df2d68;
+}
+
+.aboutPreview {
+  padding: 3rem 0;
+  background: var(--white);
+  position: relative;
+}
+
+.aboutPreviewContent {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.aboutText {
+  font-size: 1.3rem;
+  line-height: 1.9;
+  color: var(--gray);
+  font-weight: 400;
+}
+
+/* ============================================
+   CATEGORIES SECTION
+   ============================================ */
+
+.categories {
+  padding: 6rem 0;
+  background: var(--bg-light);
+}
+
+.sectionTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--secondary-teal);
+  border-radius: 2px;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.categoryCard {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  position: relative;
+  /* Default visibility for safety (fix for bug) */
+  opacity: 1;
+  transform: none;
+}
+
+.categoryCard a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.categoryTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  padding: 1.5rem 1.5rem 0.5rem;
+  transition: color 0.3s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.categoryDesc {
+  padding: 0 1.5rem 1.5rem;
+  color: var(--gray);
+  line-height: 1.6;
+  z-index: 2;
+  position: relative;
+}
+
+.categoryImage {
+  width: 100%;
+  background: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.categoryImage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.categoryCard:hover .categoryImage::before {
+  left: 100%;
+}
+
+.categoryImg {
+  aspect-ratio: 4 / 5 !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s ease;
+}
+
+.categoryImage:hover .categoryImg {
+  transform: scale(1.05);
+}
+
+.categoryCard:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(47, 87, 85, 0.3);
+}
+
+.categoryCard:hover .categoryImage {
+  transform: scale(1.05);
+}
+
+.categoryImage {
+  transition: transform 0.5s ease;
+}
+
+.categoryCard:hover .categoryTitle {
+  color: var(--primary-teal);
+}
+
+.exploreBtn {
+  margin-top: 2rem;
+  /* Animation initial state managed by helper class now */
+}
+
+/* ============================================
+   WHY CHOOSE US SECTION
+   ============================================ */
+
+.whyChooseUs {
+  padding: 6rem 0;
+  background: var(--white);
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+.featureItem {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: var(--bg-light);
+  border-radius: 20px;
+  transition: all 0.4s ease;
+}
+
+.featureItem:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(47, 87, 85, 0.2);
+  background: var(--white);
+}
+
+.featureIcon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  color: var(--primary-teal);
+}
+
+.featureIcon i {
+  font-size: 4rem;
+}
+
+.featureItem:hover .featureIcon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.featureTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+.featureText {
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* ============================================
+   TESTIMONIALS SECTION
+   ============================================ */
+
+.testimonialsPreview {
+  padding: 6rem 0;
+  background: var(--light-bg);
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.testimonialCard {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(47, 87, 85, 0.3);
+}
+
+.testimonialPhoto {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  background: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.testimonialCard:hover .testimonialPhoto {
+  transform: scale(1.1);
+}
+
+.testimonialPhoto i {
+  font-size: 3rem;
+  color: var(--primary-teal);
+}
+
+.testimonialStars {
+  color: #FFD700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 5px;
+  transition: transform 0.3s ease;
+}
+
+.testimonialStars i {
+  font-size: 1.2rem;
+}
+
+.testimonialCard:hover .testimonialStars {
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.testimonialText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonialAuthor {
+  font-weight: 600;
+  color: var(--primary-teal);
+}
+
+/* ============================================
+   FINAL CTA SECTION
+   ============================================ */
+
+.finalCta {
+  padding: 6rem 0;
+  background: var(--primary-teal);
+  color: var(--white);
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.ctaTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   LAST IMAGE SECTION
+   ============================================ */
+
+.lastPart {
+  padding: 6rem 0;
+  background: var(--light-bg);
+  position: relative;
+}
+
+.lastPartContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lastImagesWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.76rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.lastImage {
+  width: calc(25% - 1.125rem);
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.lastImage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   ANIMATION CLASSES & KEYFRAMES
+   ============================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
 
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(50px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-10px);
+  }
+
+  70% {
+    transform: scale(0.9) translateY(5px);
+  }
+
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Helper Class for Animation State */
+.isHidden {
+  opacity: 0 !important;
+  transform: translateY(30px) !important;
+}
+
+.isVisible {
+  /* Let normal CSS flow or animation take over */
+  opacity: 1 !important;
+  transform: none !important;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.slideInLeft {
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+.slideInRight {
+  animation: slideInRight 0.8s ease forwards;
+}
+
+.bounceIn {
+  animation: bounceIn 0.8s ease forwards;
+}
+
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .heroContainer {
+    padding: 0 2rem 3rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .categoriesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonialsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .heroContainer {
+    padding: 0 1.5rem 3rem;
+  }
+
+  .hero {
+    height: auto;
+  }
+
+  .heroSlide {
+    object-fit: cover;
+    object-position: center top;
+    top: 21px;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+
+  .aboutPreview,
+  .categories,
+  .whyChooseUs,
+  .testimonialsPreview,
+  .finalCta {
+    padding: 1.5rem 0;
+  }
+
+  .categoriesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .featuresGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  .ctaTitle {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .categoryTitle {
+    font-size: 1.2rem;
+    padding: 1rem 1rem 0.5rem;
+  }
+
+  .categoryDesc {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .lastImage {
+    width: calc(33.333% - 1rem);
+    height: 250px;
   }
 }
 
 @media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
+  .lastImage {
+    width: calc(50% - 0.75rem);
+    height: 200px;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
   }
 
-  .page {
-    --background: #000;
-    --foreground: #000;
+  .heroContainer {
+    padding: 0 1rem 2.5rem;
+  }
 
-    --text-primary: #ededed;
-    --text-secondary: #999;
+  .hero {
+    height: 28vh;
+  }
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
+  .heroSlide {
+    top: 32px;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .MomoSignatureWord {
+    font-size: 2.2rem;
+  }
+
+  .aboutText {
+    font-size: 1rem;
+  }
+
+  .btnGroup,
+  .ctaButtons {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .categoryCard,
+  .testimonialCard {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .categoryTitle {
+    font-size: 1.1rem;
+  }
+
+  .categoryDesc {
+    font-size: 0.85rem;
+  }
+
+  .categoriesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* ============================================
+   PREFERS REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+
+  .categoryCard,
+  .featureItem,
+  .testimonialCard,
+  .btn,
+  .heroSlide {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .isHidden {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

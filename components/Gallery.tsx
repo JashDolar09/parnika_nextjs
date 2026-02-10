@@ -10,6 +10,7 @@
  */
 "use client";
 
+import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 export type GalleryImage = {
@@ -84,14 +85,15 @@ export function Gallery({
             <li key={img.src}>
               <a href="#" className="gallery-item-link" onClick={(e) => e.preventDefault()}>
                 <figure>
-                  <img
+                  <Image
                     src={img.src.replace(/ /g, '%20')}
                     alt={img.alt}
                     width={img.width}
                     height={img.height}
                     className="image-show"
-                    loading={index < priorityCount ? "eager" : "lazy"}
-                    decoding="async"
+                    priority={index < priorityCount}
+                    sizes={sizes}
+                    style={{ height: 'auto', width: '100%' }}
                   />
                   <figcaption>{img.caption}</figcaption>
                 </figure>

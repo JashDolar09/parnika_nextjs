@@ -7,21 +7,8 @@
     box-sizing: border-box;
 }
 
-:root {
-    --primary-dark: #212121;
-    --primary-teal: #2F5755;
-    --secondary-teal: #5A9690;
-    --light-bg: #e6f2f1;
-    --white: #ffffff;
-    --dark: #432323;
-    --gray: #6B6B6B;
-    --footer-color: #2F5755;
-    --bg-light: #E0D9D9;
-    --text-light: #8B8B8B;
-}
-
 html {
-    scroll-behavior: smooth;
+
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;

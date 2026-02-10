@@ -1,14 +1,23 @@
-import Script from 'next/script';
+import Image from 'next/image';
 import type { Metadata } from 'next';
+import StatsSection from '../components/StatsSection';
+import AboutClient from '../components/AboutClient';
+import '../styles/about.css';
 
 export const metadata: Metadata = {
-    title: 'About Us - 42 Years of Heritage & Craftsmanship | Parnika',
+    title: 'About Us - 42 Years of Indian Ethnic Wear Heritage | Parnika India',
+    description: 'At Parnika India, we craft stories woven in tradition. With 42 years of expertise, we are a leading manufacturer and international supplier of premium ethnic wear.',
+    openGraph: {
+        title: "About Parnika India - 42 Years of Excellence",
+        description: "Leading manufacturer and supplier of premium Indian ethnic wear with a heritage of 42 years.",
+        url: "https://parnikaindia.com/about",
+    },
 };
 
 export default function About() {
     return (
         <>
-            <link rel="stylesheet" href="/css/about.css" />
+            <AboutClient />
 
             {/* Top Banner */}
             <section className="about-banner" id="aboutBanner">
@@ -103,10 +112,13 @@ export default function About() {
                         </div>
                         <div className="story-image fade-in-right">
                             <div className="about-img-box">
-                                <img
+                                <Image
                                     src="/images/product/about/parnika_building.png"
-                                    alt="About Image"
+                                    alt="Parnika India Corporate Building"
                                     className="about-img"
+                                    width={600}
+                                    height={400}
+                                    priority
                                     style={{ width: '100%', height: 'auto' }}
                                 />
                             </div>
@@ -160,18 +172,22 @@ export default function About() {
                         </div>
                         <div className="manufacturing-image fade-in-right">
                             <div className="about-img-box">
-                                <img
-                                    src="/images/product/about/about%201.jpg"
-                                    alt="Manufacturing 1"
+                                <Image
+                                    src="/images/product/about/about 1.jpg"
+                                    alt="Saree Manufacturing Process"
                                     className="about-img-manu"
+                                    width={400}
+                                    height={500}
                                     style={{ width: '100%', height: 'auto' }}
                                 />
                             </div>
                             <div className="about-img-box">
-                                <img
-                                    src="/images/product/about/about%204.jpg"
-                                    alt="Manufacturing 2"
+                                <Image
+                                    src="/images/product/about/about 4.jpg"
+                                    alt="Quality Check in Ethnic Wear"
                                     className="about-img-manu"
+                                    width={400}
+                                    height={500}
                                     style={{ width: '100%', height: 'auto' }}
                                 />
                             </div>
@@ -243,29 +259,8 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Stats Section */}
-            <section className="stats-section" id="statsSection">
-                <div className="container">
-                    <div className="stats-grid">
-                        <div className="stat-item fade-in-up">
-                            <div className="stat-number" data-target="42" data-suffix="+">10</div>
-                            <div className="stat-label">Years of Excellence</div>
-                        </div>
-                        <div className="stat-item fade-in-up">
-                            <div className="stat-number" data-target="150000" data-suffix="+">15000</div>
-                            <div className="stat-label">Customers Trust</div>
-                        </div>
-                        <div className="stat-item fade-in-up">
-                            <div className="stat-number" data-target="68" data-suffix="+">8</div>
-                            <div className="stat-label">Export To Countries</div>
-                        </div>
-                        <div className="stat-item fade-in-up">
-                            <div className="stat-number" data-target="10000" data-suffix="+">1090</div>
-                            <div className="stat-label">Pincodes Served</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            {/* Stats Section - Replaced with Client Component */}
+            <StatsSection />
 
             {/* Values Section */}
             <section className="values" id="values">
@@ -303,9 +298,6 @@ export default function About() {
                     </div>
                 </div>
             </section>
-
-            {/* Page-specific JavaScript */}
-            <Script src="/js/about.js" strategy="lazyOnload" />
         </>
     );
 }

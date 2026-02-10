@@ -1,15 +1,21 @@
 import type { Metadata } from 'next';
 import { Gallery } from '@/components/Gallery';
 import { sareeImages } from '@/app/data/sarees';
+import '../styles/seemore.css';
 
 export const metadata: Metadata = {
-    title: 'Our Collection - Saree | Parnika',
+    title: 'Premium Indian Sarees Collection | Parnika India',
+    description: 'Discover Parnika India\'s premium saree collection. From traditional Banarasi and silk sarees to modern party wear and printed georgettes. Handcrafted excellence from Surat.',
+    openGraph: {
+        title: "Premium Indian Sarees Collection | Parnika India",
+        description: "Explore our handpicked saree collection where tradition meets modern elegance.",
+        url: "https://parnikaindia.com/saree",
+    },
 };
 
 export default function Saree() {
     return (
         <>
-            <link rel="stylesheet" href="/css/seemore.css" />
             <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&family=Satisfy&display=swap" rel="stylesheet" />
             <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
 
@@ -20,9 +26,13 @@ export default function Saree() {
                 </div>
             </section>
 
-            <p className="hero-subtitle fade-in-up ubuntu-regular">Explore our handpicked saree collection where tradition
-                meets modern elegance each piece thoughtfully crafted to enhance your beauty, elevate your style and give you a
-                touch of timeless sophistication.</p>
+            <div className="container" style={{ textAlign: 'center', maxWidth: '1000px', margin: '2rem auto', padding: '0 1rem' }}>
+                <p className="hero-subtitle fade-in-up ubuntu-regular" style={{ color: 'var(--gray)', fontSize: '1.2rem', lineHeight: '1.6' }}>
+                    Explore our handpicked saree collection where tradition meets modern elegance. Each piece is thoughtfully
+                    crafted to enhance your beauty, elevate your style and give you a touch of timeless sophistication.
+                    From heritage weaves to contemporary designs, Parnika India offers the finest sarees for every occasion.
+                </p>
+            </div>
 
             <Gallery images={sareeImages} />
 

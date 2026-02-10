@@ -1,5 +1,8 @@
 import Script from 'next/script';
+import Image from 'next/image';
 import type { Metadata } from 'next';
+import '../styles/about.css';
+import '../styles/media.css';
 
 const mediaLogos = [
     { href: "https://retail.economictimes.indiatimes.com/blog/reinventing-retail-indian-businesses-transforming-consumer-experiences-by-2025/125379406", src: "/images/product/media/et-retail-logo.png", alt: "ETNOW", name: "ET NOW" },
@@ -23,14 +26,19 @@ const mediaLogos = [
 ];
 
 export const metadata: Metadata = {
-    title: 'Media & Recognition | Parnika - 42 Years of Excellence',
+    title: 'Media & Recognition - Parnika India in the News',
+    description: 'Explore Parnika India\'s journey of growth and national recognition. Our ethnic wear collections and business milestones covered by leading media houses.',
+    openGraph: {
+        title: "Media & Recognition | Parnika India",
+        description: "National recognition and media coverage of Parnika India's 42-year heritage and excellence.",
+        url: "https://parnikaindia.com/media",
+    },
 };
 
 export default function Media() {
     return (
         <>
-            <link rel="stylesheet" href="/css/about.css" />
-            <link rel="stylesheet" href="/css/media.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
             <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&family=Satisfy&display=swap" rel="stylesheet" />
             <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
 
@@ -83,25 +91,32 @@ export default function Media() {
                     </div>
                     <div className="highlights-images fade-in">
                         <div className="main-image-box">
-                            <img
+                            <Image
                                 src="/images/product/media/media1.jpg"
-                                alt="Parnika Store Highlight"
-                                style={{ width: '100%', height: '100%' }}
+                                alt="Parnika India Showroom Highlight"
+                                width={800}
+                                height={600}
+                                priority
+                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                             />
                         </div>
                         <div className="sub-images-row">
                             <div className="sub-image-box">
-                                <img
+                                <Image
                                     src="/images/product/media/media2.jpg"
-                                    alt="Media Feature 1"
-                                    style={{ width: '100%', height: '100%' }}
+                                    alt="Parnika Media Feature Event"
+                                    width={400}
+                                    height={300}
+                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                 />
                             </div>
                             <div className="sub-image-box sub-image-box-3">
-                                <img
+                                <Image
                                     src="/images/product/media/media3.jpg"
-                                    alt="Media Feature 2"
-                                    style={{ width: '100%', height: '100%' }}
+                                    alt="Parnika Collection Media Coverage"
+                                    width={400}
+                                    height={300}
+                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                 />
                             </div>
                         </div>
@@ -123,10 +138,12 @@ export default function Media() {
                                 rel="noreferrer"
                             >
                                 <div className="logo-img-wrapper">
-                                    <img
+                                    <Image
                                         src={logo.src}
-                                        alt={logo.alt}
-                                        style={{ width: 'auto', height: 'auto', maxWidth: '90%', maxHeight: '90%' }}
+                                        alt={`${logo.alt} logo`}
+                                        width={200}
+                                        height={100}
+                                        style={{ width: 'auto', height: 'auto', maxWidth: '90%', maxHeight: '90%', objectFit: 'contain' }}
                                     />
                                 </div>
                                 <span className="logo-name">{logo.name}</span>

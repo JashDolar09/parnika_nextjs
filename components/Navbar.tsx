@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -43,12 +44,13 @@ export default function Navbar() {
             <div className="nav-container">
                 <div className="logo-container">
                     <Link href="/" onClick={closeMenu}>
-                        <img
+                        <Image
                             src="/images/company_logo.jpg"
-                            alt="Logo"
+                            alt="Parnika India - Premium Indian Ethnic Wear"
                             width={150}
                             height={60}
                             className="logo-img"
+                            priority
                         />
                     </Link>
                 </div>

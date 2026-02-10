@@ -89,7 +89,7 @@
 
 .gallery-img-box {
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/2;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 15px 40px rgba(47, 87, 85, 0.15);

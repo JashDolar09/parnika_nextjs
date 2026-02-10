@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
                         <div className="footer-logo">
                             <Image
                                 src="/images/company_logo.jpg"
-                                alt="Logo"
+                                alt="Parnika India - Premium Indian Ethnic Wear Logo"
                                 width={142}
                                 height={90}
                                 className="logo-img-footer drop-shadow"

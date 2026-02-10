@@ -1,27 +1,38 @@
 import type { Metadata } from 'next';
 import { Gallery } from '@/components/Gallery';
 import { coatSetImages } from '@/app/data/coat_set';
+import '../styles/seemore.css';
 
 export const metadata: Metadata = {
-    title: 'Our Collection - Coat Set | Parnika',
+    title: 'Designer Coat Sets & Indo-Western Wear | Parnika India',
+    description: 'Elevate your style with Parnika India\'s designer coat sets and Indo-Western outfits. Modern silhouettes blended with traditional craftsmanship for a sophisticated look.',
+    openGraph: {
+        title: "Designer Coat Sets | Parnika India",
+        description: "Wrap yourself in style and warmth with our premium coat set collection.",
+        url: "https://parnikaindia.com/coat-set",
+    },
 };
 
 export default function CoatSet() {
     return (
         <>
-            <link rel="stylesheet" href="/css/seemore.css" />
             <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&family=Satisfy&display=swap" rel="stylesheet" />
             <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
 
             <section className="collection-hero" id="collectionHero">
                 <div className="hero-background"></div>
                 <div className="hero-content">
-                    <h1 className="hero-title fade-in-up satisfy-regular">Wrap yourself in style and warmth</h1>
+                    <h1 className="hero-title fade-in-up satisfy-regular">Wrap yourself in style and sophistication</h1>
                 </div>
             </section>
 
-            <p className="hero-subtitle fade-in-up ubuntu-regular">Step out in a coat set designed to elevate your presence soft in
-                feel, strong in style and thoughtfully made to keep you warm while bringing out your natural grace.</p>
+            <div className="container" style={{ textAlign: 'center', maxWidth: '1000px', margin: '2rem auto', padding: '0 1rem' }}>
+                <p className="hero-subtitle fade-in-up ubuntu-regular" style={{ color: 'var(--gray)', fontSize: '1.2rem', lineHeight: '1.6' }}>
+                    Step out in a coat set designed to elevate your presence. Soft in feel, strong in style and thoughtfully
+                    made to bring out your natural grace. Parnika India&apos;s Indo-Western collections are perfect for
+                    the contemporary woman who values tradition with a twist.
+                </p>
+            </div>
 
             <Gallery images={coatSetImages} />
 

@@ -1,15 +1,23 @@
 import Script from 'next/script';
+import Image from 'next/image';
 import type { Metadata } from 'next';
+import '../styles/about.css';
+import '../styles/our_factory.css';
 
 export const metadata: Metadata = {
-    title: 'Our Factory - Manufacturing Excellence | Parnika',
+    title: 'Our Factory - Manufacturing Excellence in Ethnic Wear | Parnika India',
+    description: 'Explore the heart of Parnika India. Our state-of-the-art manufacturing facility in Surat combines craftsmanship with modern technology to create premium ethnic wear.',
+    openGraph: {
+        title: "Parnika India Factory - Manufacturing Excellence",
+        description: "State-of-the-art manufacturing facility for sarees, kurtis, and designer suits in Surat.",
+        url: "https://parnikaindia.com/our-factory",
+    },
 };
 
 export default function OurFactory() {
     return (
         <>
-            <link rel="stylesheet" href="/css/about.css" />
-            <link rel="stylesheet" href="/css/our_factory.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
             <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&family=Satisfy&display=swap" rel="stylesheet" />
             <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
 
@@ -64,11 +72,13 @@ export default function OurFactory() {
                         </div>
                         <div className="gallery-image-wrapper">
                             <div className="gallery-img-box">
-                                <img
+                                <Image
                                     src="/images/product/factory/saree-weaving-1.jpg"
-                                    alt="Saree Production"
+                                    alt="Saree Weaving and Production Process"
                                     className="gallery-img"
-                                    style={{ width: '100%', height: 'auto' }}
+                                    width={800}
+                                    height={500}
+                                    priority
                                 />
                             </div>
                         </div>
@@ -87,11 +97,12 @@ export default function OurFactory() {
                         </div>
                         <div className="gallery-image-wrapper">
                             <div className="gallery-img-box">
-                                <img
+                                <Image
                                     src="/images/product/factory/saree-weaving-5.png"
-                                    alt="Precision Printing"
+                                    alt="Precision Printing on Ethnic Wear"
                                     className="gallery-img"
-                                    style={{ width: '100%', height: 'auto' }}
+                                    width={800}
+                                    height={500}
                                 />
                             </div>
                         </div>
@@ -110,11 +121,12 @@ export default function OurFactory() {
                         </div>
                         <div className="gallery-image-wrapper">
                             <div className="gallery-img-box">
-                                <img
+                                <Image
                                     src="/images/product/factory/saree-weaving-6.png"
-                                    alt="Quality Control"
+                                    alt="Stringent Quality Control Process"
                                     className="gallery-img"
-                                    style={{ width: '100%', height: 'auto' }}
+                                    width={800}
+                                    height={500}
                                 />
                             </div>
                         </div>
@@ -151,3 +163,4 @@ export default function OurFactory() {
         </>
     );
 }
+

@@ -1,17 +1,25 @@
 import Script from 'next/script';
+import Image from 'next/image';
 import type { Metadata } from 'next';
+import '../styles/about.css';
+import '../styles/parnika_franchises.css';
 
 export const metadata: Metadata = {
-    title: 'Parnika Franchises - Building Successful Partnerships | Parnika',
+    title: 'Parnika Franchises - Building Successful Business Partnerships | Parnika India',
+    description: 'Join India\'s leading ethnic wear brand. Parnika India offers lucrative franchise opportunities with a proven business model, training support, and 42 years of trust.',
+    openGraph: {
+        title: "Franchise Opportunity with Parnika India",
+        description: "Partner with Surat's leading ethnic wear brand. Proven franchise models with high ROI.",
+        url: "https://parnikaindia.com/parnika-franchises",
+    },
 };
 
 export default function ParnikaFranchises() {
     return (
         <>
-            <link rel="stylesheet" href="/css/about.css" />
-            <link rel="stylesheet" href="/css/parnika_franchises.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
             <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&family=Satisfy&display=swap" rel="stylesheet" />
-            <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
 
             {/* Top Banner */}
             <section className="about-banner" id="aboutBanner">
@@ -54,9 +62,12 @@ export default function ParnikaFranchises() {
                         </ul>
                         {/* Image */}
                         <div className="why-img-box">
-                            <img
+                            <Image
                                 src="/images/frenchises_image.png"
-                                alt="Parnika Store Front"
+                                alt="Parnika India Franchise Store Front"
+                                width={600}
+                                height={400}
+                                priority
                                 style={{ width: '100%', height: 'auto' }}
                             />
                         </div>
@@ -70,24 +81,30 @@ export default function ParnikaFranchises() {
                     <h2 className="section-title">Inside <span className="Momo-Signature-word">Our</span> Franchise Layout</h2>
                     <div className="presence-grid">
                         <div className="presence-item">
-                            <img
+                            <Image
                                 src="/images/product/frenchise/frenchise_layout_1.png"
-                                alt="Showroom Interior"
-                                style={{ width: '100%', height: '100%' }}
+                                alt="Parnika India Showroom Interior Layout"
+                                width={400}
+                                height={300}
+                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                             />
                         </div>
                         <div className="presence-item">
-                            <img
+                            <Image
                                 src="/images/product/frenchise/frenchise_layout_2.png"
-                                alt="Product Display"
-                                style={{ width: '100%', height: '100%' }}
+                                alt="Franchise Product Display and Shelving"
+                                width={400}
+                                height={300}
+                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                             />
                         </div>
                         <div className="presence-item">
-                            <img
+                            <Image
                                 src="/images/product/frenchise/frenchise_layout_3.png"
-                                alt="Store Branding"
-                                style={{ width: '100%', height: '100%' }}
+                                alt="Exclusive Store Branding and Ambience"
+                                width={400}
+                                height={300}
+                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                             />
                         </div>
                     </div>
@@ -161,10 +178,12 @@ export default function ParnikaFranchises() {
                 <div className="container">
                     <h2 className="section-title">Franchise Comparison</h2>
                     <div className="comparison-image-container">
-                        <img
+                        <Image
                             src="/images/product/frenchise/frachise_compressed.jpg"
-                            alt="Franchise Comparison"
+                            alt="Detailed Comparison of Parnika India Franchise Models"
                             className="comparison-img"
+                            width={1200}
+                            height={800}
                             style={{ width: '100%', height: 'auto' }}
                         />
                     </div>
@@ -262,6 +281,8 @@ export default function ParnikaFranchises() {
                 <div className="modal-content">
                     <span className="close-btn">&times;</span>
                     <div className="modal-body-content">
+                        {/* Note: This image is dynamically controlled by parnika_franchises.js */}
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img id="modalImg" className="modal-img" src="" alt="Franchise Detail" />
                     </div>
                 </div>
@@ -272,3 +293,4 @@ export default function ParnikaFranchises() {
         </>
     );
 }
+

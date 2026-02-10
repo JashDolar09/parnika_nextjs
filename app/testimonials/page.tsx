@@ -1,5 +1,7 @@
 import Script from 'next/script';
+import Image from 'next/image';
 import type { Metadata } from 'next';
+import '../styles/review.css';
 
 const customerReviews = [
     { name: "Lakshmi B, Retail Buyer, Mumbai", text: "We selected in video call. The ethnic wear was beautifully designed and tailored. Fit was perfect and the fabric felt luxurious. The women's collection is classy and vibrant. Would surely recommend this brand!", img: "/images/product/review/La.jpg" },
@@ -28,13 +30,19 @@ const franchiseReviews = [
 ];
 
 export const metadata: Metadata = {
-    title: 'Testimonials - Customer Reviews & Feedback | Parnika',
+    title: 'Customer Reviews & Testimonials | Parnika India',
+    description: 'Read what our customers, wholesalers, and franchise partners have to say about Parnika India\'s quality, designs, and business support. Over 42 years of excellence.',
+    openGraph: {
+        title: "Testimonials - Parnika India Reviews",
+        description: "Voices of satisfaction from our global community of customers and partners.",
+        url: "https://parnikaindia.com/testimonials",
+    },
 };
 
 export default function Testimonials() {
     return (
         <>
-            <link rel="stylesheet" href="/css/review.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
             {/* Testimonials Hero */}
             <section className="testimonials-hero" id="testimonialsHero">
@@ -56,11 +64,12 @@ export default function Testimonials() {
                                     {review.icon ? (
                                         <i className={review.icon}></i>
                                     ) : (
-                                        <img
+                                        <Image
                                             src={review.img || ''}
-                                            alt="Customer Logo"
+                                            alt={`${review.name} - Reviewer Image`}
                                             width={100}
                                             height={100}
+                                            style={{ borderRadius: '50%', objectFit: 'cover' }}
                                         />
                                     )}
                                 </div>
@@ -93,11 +102,12 @@ export default function Testimonials() {
                                     {review.icon ? (
                                         <i className={review.icon}></i>
                                     ) : (
-                                        <img
+                                        <Image
                                             src={review.img || ''}
-                                            alt="Wholesaler Logo"
+                                            alt={`${review.name} - Wholesaler Image`}
                                             width={80}
                                             height={80}
+                                            style={{ borderRadius: '50%', objectFit: 'cover' }}
                                         />
                                     )}
                                 </div>
@@ -167,3 +177,4 @@ export default function Testimonials() {
         </>
     );
 }
+

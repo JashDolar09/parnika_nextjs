@@ -1,21 +1,29 @@
 import Script from 'next/script';
+import Image from 'next/image';
 import type { Metadata } from 'next';
+import Link from 'next/link';
+import '../styles/collection.css';
 
 export const metadata: Metadata = {
-    title: 'Our Collection - Premium Indian Ethnic Wear | Parnika',
+    title: 'Our Collection - Premium Indian Ethnic Wear | Parnika India',
+    description: 'Explore our curated collection of premium sarees, kurtis, lehengas, and ethnic wear. Crafted with 42 years of heritage and excellence.',
+    openGraph: {
+        title: "Our Collection - Premium Indian Ethnic Wear",
+        description: "Explore our curated collection of premium sarees, kurtis, lehengas, and ethnic wear.",
+        url: "https://parnikaindia.com/collection",
+    },
 };
 
 export default function Collection() {
     return (
         <>
-            <link rel="stylesheet" href="/css/collection.css" />
             <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
 
             {/* Collection Hero */}
             <section className="collection-hero" id="collectionHero">
                 <div className="hero-background"></div>
                 <div className="hero-content">
-                    <h1 className="hero-title fade-in-up">Discover Our Exclusive Picks</h1>
+                    <h1 className="hero-title fade-in-up">Discover Our Exclusive Ethnic Collection</h1>
                     <p className="hero-subtitle fade-in-up ubuntu-regular">
                         Each piece is made with premium fabrics, thoughtful design, and attention to detail. Perfect for
                         everyday wear, events, weddings, or wholesale orders.
@@ -31,10 +39,13 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img
-                                        src="/images/product/saree/saree%202.webp"
-                                        alt="Premium Sarees"
+                                    <Image
+                                        src="/images/product/saree/saree 2.webp"
+                                        alt="Premium Ethnic Sarees"
                                         className="category-img"
+                                        width={400}
+                                        height={600}
+                                        priority
                                     />
                                 </div>
                                 <div className="category-overlay">
@@ -44,7 +55,7 @@ export default function Collection() {
                                 </div>
                             </div>
                             <div className="category-info">
-                                <h3 className="category-title">Sarees</h3>
+                                <h2 className="category-title">Sarees</h2>
                                 <p className="category-description">
                                     From classic to modern, festive to everyday, made with soft, high-quality fabrics and fine details
                                 </p>
@@ -60,10 +71,13 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img
-                                        src="/images/product/lehenga/Lehenga%2013.webp"
+                                    <Image
+                                        src="/images/product/lehenga/Lehenga 13.webp"
                                         alt="Party & Bridal Gowns"
                                         className="category-img"
+                                        width={400}
+                                        height={600}
+                                        priority
                                     />
                                 </div>
                                 <div className="category-overlay">
@@ -73,7 +87,7 @@ export default function Collection() {
                                 </div>
                             </div>
                             <div className="category-info">
-                                <h3 className="category-title">Party & Bridal Lehenga</h3>
+                                <h2 className="category-title">Party & Bridal Lehenga</h2>
                                 <p className="category-description">
                                     Elegant silhouettes with stunning designs, perfect for weddings, parties and grand celebrations
                                 </p>
@@ -89,10 +103,12 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img
+                                    <Image
                                         src="/images/product/kurti/image_collection.webp"
-                                        alt="Stylish Kurtis"
+                                        alt="Stylish Designer Kurtis"
                                         className="category-img"
+                                        width={400}
+                                        height={600}
                                     />
                                 </div>
                                 <div className="category-overlay">
@@ -102,7 +118,7 @@ export default function Collection() {
                                 </div>
                             </div>
                             <div className="category-info">
-                                <h3 className="category-title">Stylish Kurtis</h3>
+                                <h2 className="category-title">Stylish Kurtis</h2>
                                 <p className="category-description">
                                     Casual, office and trendy styles crafted for comfort, elegance, charm and the modern lifestyle
                                 </p>
@@ -118,10 +134,12 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img
+                                    <Image
                                         src="/images/product/suits/image_collection.webp"
-                                        alt="Designer Suits"
+                                        alt="Ethnic Designer Suits"
                                         className="category-img"
+                                        width={400}
+                                        height={600}
                                     />
                                 </div>
                                 <div className="category-overlay">
@@ -131,7 +149,7 @@ export default function Collection() {
                                 </div>
                             </div>
                             <div className="category-info">
-                                <h3 className="category-title">Designer Suits</h3>
+                                <h2 className="category-title">Designer Suits</h2>
                                 <p className="category-description">
                                     Modern and traditional styles with beautiful embroidery, perfect for parties and special occasions
                                 </p>
@@ -147,10 +165,12 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img
+                                    <Image
                                         src="/images/product/pakistani_suits/Pakistani suit 1.webp"
-                                        alt="Pakistani Suits"
+                                        alt="Embroidered Pakistani Suits"
                                         className="category-img"
+                                        width={400}
+                                        height={600}
                                     />
                                 </div>
                                 <div className="category-overlay">
@@ -160,7 +180,7 @@ export default function Collection() {
                                 </div>
                             </div>
                             <div className="category-info">
-                                <h3 className="category-title">Pakistani Suits</h3>
+                                <h2 className="category-title">Pakistani Suits</h2>
                                 <p className="category-description">
                                     Exquisite designs with rich cultural heritage, featuring heavy embroidery and luxurious fabrics
                                 </p>
@@ -172,14 +192,16 @@ export default function Collection() {
                             </div>
                         </div>
 
-                        {/* Delivery Saree */}
+                        {/* Uniform Saree */}
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img
+                                    <Image
                                         src="/images/product/delivery_saree/Delivery_Saree 1.webp"
-                                        alt="Delivery Saree"
+                                        alt="Uniform Saree Manufacturer & Supplier"
                                         className="category-img"
+                                        width={400}
+                                        height={600}
                                     />
                                 </div>
                                 <div className="category-overlay">
@@ -189,14 +211,14 @@ export default function Collection() {
                                 </div>
                             </div>
                             <div className="category-info">
-                                <h3 className="category-title">Delivery Saree</h3>
+                                <h2 className="category-title">Uniform Saree</h2>
                                 <p className="category-description">
                                     Affordable and high-quality sarees, ideal for businesses seeking reliable and consistent suppliers
                                 </p>
                                 <div className="category-features">
                                     <span className="feature-tag"><i className="fas fa-check"></i> Affordable</span>
                                     <span className="feature-tag"><i className="fas fa-check"></i> High Quality</span>
-                                    <span className="feature-tag"><i className="fa-solid fa-angles-right"></i> <a href="/delivery-saree" className="see-more-link">Explore Collection</a></span>
+                                    <span className="feature-tag"><i className="fa-solid fa-angles-right"></i> <a href="/uniform-saree" className="see-more-link">Explore Collection</a></span>
                                 </div>
                             </div>
                         </div>
@@ -205,10 +227,12 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img
-                                        src="/images/product/saree/saree%205.webp"
-                                        alt="Silk Saree"
+                                    <Image
+                                        src="/images/product/saree/saree 5.webp"
+                                        alt="Royal Silk Saree Collection"
                                         className="category-img"
+                                        width={400}
+                                        height={600}
                                     />
                                 </div>
                                 <div className="category-overlay">
@@ -218,7 +242,7 @@ export default function Collection() {
                                 </div>
                             </div>
                             <div className="category-info">
-                                <h3 className="category-title">Silk Saree</h3>
+                                <h2 className="category-title">Silk Saree</h2>
                                 <p className="category-description">
                                     Regal pieces for your special day, adorned with sumptuous fabrics and delicate detailing
                                 </p>
@@ -234,10 +258,12 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img
-                                        src="/images/product/festive_season/festive_season%202.webp"
-                                        alt="Festive Season"
+                                    <Image
+                                        src="/images/product/festive_season/festive_season 2.webp"
+                                        alt="Festive Season Ethnic Wear"
                                         className="category-img"
+                                        width={400}
+                                        height={600}
                                     />
                                 </div>
                                 <div className="category-overlay">
@@ -247,7 +273,7 @@ export default function Collection() {
                                 </div>
                             </div>
                             <div className="category-info">
-                                <h3 className="category-title">Festive Season</h3>
+                                <h2 className="category-title">Festive Season</h2>
                                 <p className="category-description">
                                     Elegant styles with fine details and vibrant accents, perfect for weddings, parties and festive celebrations
                                 </p>
@@ -263,10 +289,12 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img
-                                        src="/images/product/coat_set/coat_set%203.webp"
-                                        alt="Coat Set"
+                                    <Image
+                                        src="/images/product/coat_set/coat_set 3.webp"
+                                        alt="Designer Coat Set"
                                         className="category-img"
+                                        width={400}
+                                        height={600}
                                     />
                                 </div>
                                 <div className="category-overlay">
@@ -276,7 +304,7 @@ export default function Collection() {
                                 </div>
                             </div>
                             <div className="category-info">
-                                <h3 className="category-title">Coat Set</h3>
+                                <h2 className="category-title">Coat Set</h2>
                                 <p className="category-description">
                                     Stylish designs with unique accents and subtle elegance, perfect for parties, events and special occasions
                                 </p>
@@ -292,10 +320,12 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img
-                                        src="/images/product/kurta_set/kurta_set%204.webp"
-                                        alt="Kurta Set"
+                                    <Image
+                                        src="/images/product/kurta_set/kurta_set 4.webp"
+                                        alt="Traditional Kurta Set"
                                         className="category-img"
+                                        width={400}
+                                        height={600}
                                     />
                                 </div>
                                 <div className="category-overlay">
@@ -305,7 +335,7 @@ export default function Collection() {
                                 </div>
                             </div>
                             <div className="category-info">
-                                <h3 className="category-title">Kurta Set</h3>
+                                <h2 className="category-title">Kurta Set</h2>
                                 <p className="category-description">
                                     Comfortable and trendy kurta sets, crafted for a perfect blend of style and everyday elegance
                                 </p>
@@ -321,10 +351,12 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img
-                                        src="/images/product/salwar_kameez/salwar_kameez%202.webp"
-                                        alt="Salwar Kameez"
+                                    <Image
+                                        src="/images/product/salwar_kameez/salwar_kameez 2.webp"
+                                        alt="Designer Salwar Kameez"
                                         className="category-img"
+                                        width={400}
+                                        height={600}
                                     />
                                 </div>
                                 <div className="category-overlay">
@@ -334,7 +366,7 @@ export default function Collection() {
                                 </div>
                             </div>
                             <div className="category-info">
-                                <h3 className="category-title">Salwar Kameez</h3>
+                                <h2 className="category-title">Salwar Kameez</h2>
                                 <p className="category-description">
                                     Trendy and elegant designs, carefully crafted with care for a stylish, comfortable and timeless look
                                 </p>
@@ -350,10 +382,12 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img
-                                        src="/images/product/short_kurti/short_kurti%202.webp"
-                                        alt="Short Kurti"
+                                    <Image
+                                        src="/images/product/short_kurti/short_kurti 2.webp"
+                                        alt="Chic Short Kurti"
                                         className="category-img"
+                                        width={400}
+                                        height={600}
                                     />
                                 </div>
                                 <div className="category-overlay">
@@ -363,7 +397,7 @@ export default function Collection() {
                                 </div>
                             </div>
                             <div className="category-info">
-                                <h3 className="category-title">Short Kurti</h3>
+                                <h2 className="category-title">Short Kurti</h2>
                                 <p className="category-description">
                                     Chic and vibrant short kurtis, carefully crafted for everyday wear with a stylish, comfortable twist
                                 </p>
@@ -379,10 +413,12 @@ export default function Collection() {
                         <div className="category-card fade-up">
                             <div className="category-image-wrapper">
                                 <div className="category-image">
-                                    <img
-                                        src="/images/product/top/top%201.webp"
-                                        alt="Girls Top"
+                                    <Image
+                                        src="/images/product/top/top 1.webp"
+                                        alt="Stylish Girls Tops"
                                         className="category-img"
+                                        width={400}
+                                        height={600}
                                     />
                                 </div>
                                 <div className="category-overlay">
@@ -392,7 +428,7 @@ export default function Collection() {
                                 </div>
                             </div>
                             <div className="category-info">
-                                <h3 className="category-title">Girls Top</h3>
+                                <h2 className="category-title">Girls Top</h2>
                                 <p className="category-description">
                                     Cute and playful tops designed for comfort and style, perfect for school or casual outings
                                 </p>

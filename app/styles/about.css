@@ -15,29 +15,9 @@ body {
     max-width: 100vw;
 }
 
-:root {
-    --primary-dark: #432323;
-    --primary-dark: #212121;
-    --primary-teal: #2F5755;
-    --secondary-teal: #5A9690;
-    --light-bg: #e6f2f1;
-    --white: #ffffff;
-    --dark: #212121;
-    --gray: #6B6B6B;
-    --footer-color: #2F5755;
-    --bg-light: #E0D9D9;
-    --text-light: #8B8B8B;
-    --transition: all 0.9s cubic-bezier(0.2, 1, 0.3, 1);
-}
 
-html {
-    scroll-behavior: smooth;
-    width: 100%;
-    overflow-x: hidden;
-}
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--dark);
     overflow-x: hidden;
@@ -47,9 +27,9 @@ body {
     position: relative;
 }
 
-body:not(.page-loaded) * {
+/* body:not(.page-loaded) * {
     animation-play-state: paused !important;
-}
+} */
 
 .container {
     max-width: 1400px;
@@ -100,7 +80,7 @@ body:not(.page-loaded) * {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/image1.png');
+    background-color: var(--light-bg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

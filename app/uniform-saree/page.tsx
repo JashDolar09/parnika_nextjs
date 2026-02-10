@@ -1,19 +1,19 @@
 import type { Metadata } from 'next';
 import { Gallery } from '@/components/Gallery';
-import { shortKurtiImages } from '@/app/data/short_kurti';
+import { uniformSareeImages } from '@/app/data/uniform_saree';
 import '../styles/seemore.css';
 
 export const metadata: Metadata = {
-    title: 'Trendy Short Kurtis & Daily Wear Tunics | Parnika India',
-    description: 'Shop Parnika India\'s trendy collection of short kurtis and ethnic tunics. Perfect for pairing with jeans or palazzos for a chic and comfortable daily look.',
+    title: 'Uniform Saree Manufacturer & Supplier | Parnika India',
+    description: 'Parnika India is a trusted uniform saree manufacturer and supplier in India, offering premium quality corporate, office, hospital, and staff uniform sarees.',
     openGraph: {
-        title: "Trendy Short Kurtis | Parnika India",
-        description: "Our short kurtis blend tradition and style, designed to bring out your grace.",
-        url: "https://parnikaindia.com/short-kurti",
+        title: "Uniform Saree Manufacturer & Supplier",
+        description: "Premium quality corporate and staff uniform sarees at wholesale prices.",
+        url: "https://parnikaindia.com/uniform-saree",
     },
 };
 
-export default function ShortKurti() {
+export default function UniformSaree() {
     return (
         <>
             <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&family=Satisfy&display=swap" rel="stylesheet" />
@@ -22,19 +22,31 @@ export default function ShortKurti() {
             <section className="collection-hero" id="collectionHero">
                 <div className="hero-background"></div>
                 <div className="hero-content">
-                    <h1 className="hero-title fade-in-up satisfy-regular">Chic Short Kurti Collections</h1>
+                    <h1 className="hero-title fade-in-up satisfy-regular">Premium Uniform Saree Collection</h1>
                 </div>
             </section>
 
             <div className="container" style={{ textAlign: 'center', maxWidth: '1000px', margin: '2rem auto', padding: '0 1rem' }}>
                 <p className="hero-subtitle fade-in-up ubuntu-regular" style={{ color: 'var(--gray)', fontSize: '1.2rem', lineHeight: '1.6' }}>
-                    Our short kurtis blend tradition and style, designed to bring out your grace, confidence and timeless beauty.
-                    Versatile, vibrant, and effortlessly stylish, Parnika India&apos;s short kurtis are a must-have for the
-                    modern woman&apos;s casual wardrobe.
+                    Explore our handpicked uniform saree collection where tradition meets modern elegance. Each piece is
+                    thoughtfully crafted by Parnika India to enhance professionalism and provide all-day comfort
+                    for staff and corporate teams.
                 </p>
             </div>
 
-            <Gallery images={shortKurtiImages} />
+            <Gallery images={uniformSareeImages} />
+
+            {/* SEO Content Section */}
+            <section className="seo-content-section" style={{ padding: '40px 0', backgroundColor: '#f9f9f9' }}>
+                <div className="container">
+                    <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+                        <h2 style={{ fontSize: '24px', marginBottom: '20px', color: '#333' }}>Trusted Uniform Saree Manufacturer in India</h2>
+                        <p style={{ fontSize: '16px', lineHeight: '1.6', color: '#666' }}>
+                            Parnika India is a trusted uniform saree manufacturer and supplier in India, offering premium quality corporate, office, hospital, and staff uniform sarees in cotton, linen, and easy-maintenance fabrics at wholesale prices.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
             <section className="collection-cta" id="collectionCta">
                 <div className="container">

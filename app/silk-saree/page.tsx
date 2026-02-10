@@ -1,27 +1,38 @@
 import type { Metadata } from 'next';
 import { Gallery } from '@/components/Gallery';
 import { silkSareeImages } from '@/app/data/silk_saree';
+import '../styles/seemore.css';
 
 export const metadata: Metadata = {
-    title: 'Our Collection - Silk Saree | Parnika',
+    title: 'Pure Silk Sarees & Traditional Handloom | Parnika India',
+    description: 'Explore Parnika India\'s exquisite collection of pure silk sarees, Banarasi silks, and traditional handlooms. Luxurious fabrics and eternal designs for weddings and festivals.',
+    openGraph: {
+        title: "Pure Silk Sarees Collection | Parnika India",
+        description: "Experience the luxury of heritage with our premium silk sarees.",
+        url: "https://parnikaindia.com/silk-saree",
+    },
 };
 
 export default function SilkSaree() {
     return (
         <>
-            <link rel="stylesheet" href="/css/seemore.css" />
             <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&family=Satisfy&display=swap" rel="stylesheet" />
             <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
 
             <section className="collection-hero" id="collectionHero">
                 <div className="hero-background"></div>
                 <div className="hero-content">
-                    <h1 className="hero-title fade-in-up satisfy-regular">Celebrate every moment with colors, charm and designs</h1>
+                    <h1 className="hero-title fade-in-up satisfy-regular">Exquisite Silk Saree Collections</h1>
                 </div>
             </section>
 
-            <p className="hero-subtitle fade-in-up ubuntu-regular">Our silk sarees blend tradition and style, designed to bring out
-                your grace, confidence and timeless beauty.</p>
+            <div className="container" style={{ textAlign: 'center', maxWidth: '1000px', margin: '2rem auto', padding: '0 1rem' }}>
+                <p className="hero-subtitle fade-in-up ubuntu-regular" style={{ color: 'var(--gray)', fontSize: '1.2rem', lineHeight: '1.6' }}>
+                    Our silk sarees blend tradition and style, designed to bring out your grace, confidence and timeless beauty.
+                    From the rich luster of Banarasi silk to the intricate gold zari work, Parnika India brings you the finest
+                    weaves that have defined Indian heritage for centuries.
+                </p>
+            </div>
 
             <Gallery images={silkSareeImages} />
 

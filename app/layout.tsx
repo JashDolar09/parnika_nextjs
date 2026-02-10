@@ -1,11 +1,27 @@
-import type { Metadata } from "next";
-import Script from "next/script";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import type { Metadata } from 'next';
+import Script from 'next/script';
+import { Montserrat } from 'next/font/google';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import './globals.css';
+import './styles/navabar.css';
+import './styles/footer.css';
+import { GlobalAnimations } from '@/components/ClientAnimations';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
+  variable: '--font-montserrat',
+});
 
 export const metadata: Metadata = {
-  title: "Premium Indian Ethnic Wear | 42 Years of Crafting Elegance",
+  metadataBase: new URL('https://parnikaindia.com'),
+  title: 'Premium Indian Ethnic Wear | 42 Years of Crafting Elegance',
   description: "For four decades we've been manufacturing premium ethnic wear that blends tradition with today's style. From finely crafted sarees to stylish kurtis, suits, and gowns.",
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: [
       { url: '/favicon.png', sizes: '32x32' },
@@ -29,31 +45,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet" />
-        <link rel="stylesheet" href="/css/navabar.css" />
-        <link rel="stylesheet" href="/css/footer.css" />
       </head>
-      <body suppressHydrationWarning>
-        <Script id="failsafe-reveal" strategy="afterInteractive">
-          {`
-            (function() {
-              // Add page-loaded class to body immediately to trigger animations
-              document.body.classList.add('page-loaded');
-              
-              setTimeout(function() {
-                document.documentElement.style.opacity = '1';
-                document.body.style.opacity = '1';
-                // Trigger visibility for all animated elements that might be stuck
-                const animated = document.querySelectorAll('.fade-in-up, .fade-up, .category-card, .feature-item, .testimonial-card, .section-title, .cta-title, .cta-text, .cta-buttons');
-                animated.forEach(el => {
-                  el.classList.add('visible');
-                  el.style.opacity = '1';
-                  el.style.transform = 'none';
-                });
-              }, 500);
-            })();
-          `}
-        </Script>
+      <body className={montserrat.className} suppressHydrationWarning>
+        <GlobalAnimations />
         {/* Scroll Progress Bar */}
         <div className="scroll-progress"></div>
 

@@ -1,14 +1,22 @@
 import Script from 'next/script';
 import type { Metadata } from 'next';
+import '../styles/contact.css';
+import { ContactFormLogic } from '@/components/ClientAnimations';
 
 export const metadata: Metadata = {
-    title: 'Contact Us - Get in Touch | Parnika',
+    title: 'Contact Us - Get in Touch | Parnika India',
+    description: 'Have questions or interested in our ethnic wear collection? Contact Parnika India for retail, wholesale, or franchise inquiries. Reach us via phone, email, or WhatsApp.',
+    openGraph: {
+        title: "Contact Parnika India - Premium Ethnic Wear",
+        description: "Connect with us for all your ethnic wear needs. We're here to help.",
+        url: "https://parnikaindia.com/contact",
+    },
 };
 
 export default function Contact() {
     return (
         <>
-            <link rel="stylesheet" href="/css/contact.css" />
+            <ContactFormLogic />
 
             {/* Contact Hero */}
             <section className="contact-hero" id="contactHero">

@@ -1,15 +1,21 @@
 import type { Metadata } from 'next';
 import { Gallery } from '@/components/Gallery';
 import { suitsImages } from '@/app/data/suits';
+import '../styles/seemore.css';
 
 export const metadata: Metadata = {
-    title: 'Our Collection - Suits | Parnika',
+    title: 'Designer Salwar Suits & Ethnic Sets | Parnika India',
+    description: 'Shop Parnika India\'s collection of designer salwar suits, Readymade ethnic sets, and unstitched dress materials. Elegant designs for daily wear and special occasions.',
+    openGraph: {
+        title: "Designer Salwar Suits | Parnika India",
+        description: "Our suits blend tradition and style, designed to bring out your grace.",
+        url: "https://parnikaindia.com/suits",
+    },
 };
 
 export default function Suits() {
     return (
         <>
-            <link rel="stylesheet" href="/css/seemore.css" />
             <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&family=Satisfy&display=swap" rel="stylesheet" />
             <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
 
@@ -20,8 +26,12 @@ export default function Suits() {
                 </div>
             </section>
 
-            <p className="hero-subtitle fade-in-up ubuntu-regular">Our suits blend tradition and style, designed to bring out
-                your grace, confidence and timeless beauty.</p>
+            <div className="container" style={{ textAlign: 'center', maxWidth: '1000px', margin: '2rem auto', padding: '0 1rem' }}>
+                <p className="hero-subtitle fade-in-up ubuntu-regular" style={{ color: 'var(--gray)', fontSize: '1.2rem', lineHeight: '1.6' }}>
+                    Our suits blend tradition and style, designed to bring out your grace, confidence and timeless beauty.
+                    From intricate embroidery to contemporary prints, discover the perfect ethnic ensemble at Parnika India.
+                </p>
+            </div>
 
             <Gallery images={suitsImages} />
 
