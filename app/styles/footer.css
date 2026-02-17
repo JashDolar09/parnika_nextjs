@@ -14,22 +14,34 @@
     overflow-x: hidden;
 }
 
+.footer .container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3rem;
+    box-sizing: border-box;
+}
+
 
 @media (max-width: 768px) {
     .footer {
         background-position: center center;
-        /* Keeps the image centered */
         padding: 3rem 0 1.5rem;
-        /* Adjust padding for smaller screens */
+    }
+
+    .footer .container {
+        padding: 0 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
     .footer {
         background-size: auto 100%;
-        /* Adjust size to make sure the background fits */
         padding: 2.5rem 0 1rem;
-        /* Further reduce padding on very small screens */
+    }
+
+    .footer .container {
+        padding: 0 1rem;
     }
 }
 

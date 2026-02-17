@@ -24,10 +24,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.png', sizes: '32x32' },
-      { url: '/favicon.png', sizes: '192x192' },
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.png', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon.png', sizes: '192x192', type: 'image/png' },
     ],
-    apple: '/favicon.png',
+    apple: [
+      { url: '/favicon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
 };
 
@@ -39,12 +42,27 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.png" sizes="any" />
-        <link rel="apple-touch-icon" href="/favicon.png" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap" rel="stylesheet" />
+        {/* Organization Structured Data for Google Logo Search Results */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Parnika India",
+              "url": "https://parnikaindia.com",
+              "logo": "https://parnikaindia.com/logo.png",
+              "sameAs": [
+                "https://www.instagram.com/parnikaindia/",
+                "https://wa.me/917590048900"
+              ]
+            })
+          }}
+        />
       </head>
       <body className={montserrat.className} suppressHydrationWarning>
         <GlobalAnimations />
