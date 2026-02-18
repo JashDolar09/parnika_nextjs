@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../page.module.css';
+import { defaultCity } from '../data/cities';
+import LocationContent from './LocationContent';
 
 // Hero images data
 const heroImages = [
@@ -11,7 +13,11 @@ const heroImages = [
     '/images/product/home/wb 5.png'
 ];
 
-export default function HomeClient() {
+interface HomeClientProps {
+    city?: string;
+}
+
+export default function HomeClient({ city }: HomeClientProps) {
     const [currentSlide, setCurrentSlide] = useState(0);
     const observerRef = useRef<IntersectionObserver | null>(null);
 
@@ -63,7 +69,9 @@ export default function HomeClient() {
     return (
         <>
             {/* SEO H1 - Hidden visually if needed, but semantic is required */}
-            <h1 style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', border: 0 }}>Premium Indian Ethnic Wear - Parnika India</h1>
+            <h1 style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0,0,0,0)', border: 0 }}>
+                Premium Indian Ethnic Wear {city ? `in ${city}` : ''} - Parnika India
+            </h1>
 
             {/* Hero Banner */}
             <section className={styles.hero} id="hero">
@@ -101,42 +109,7 @@ export default function HomeClient() {
                 </div>
             </section>
 
-            {/* Trusted Saree Seller */}
-            <section className={styles.trustedSection} id="trustedSareeSeller">
-                <div className={styles.container}>
-                    <div className={styles.trustedGrid}>
-                        <div className={styles.trustedImageWrapper}>
-                            <Image
-                                src="/images/product/saree/saree 1.webp"
-                                alt="Trusted Saree Seller in Surat - Parnika India"
-                                width={600}
-                                height={700}
-                                className={styles.trustedImage}
-                            />
-                        </div>
-                        <div className={styles.trustedContent}>
-                            <h2 className={styles.sectionTitle}><span className={styles.MomoSignatureWord}>Trusted Saree</span> Seller in Surat</h2>
-                            <p className={styles.trustedParagraph}>
-                                Welcome to Parnika India, your reliable place to buy beautiful and high-quality sarees in Surat. We offer a wide range of traditional and modern sarees designed for comfort, elegance, and every special occasion.
-                            </p>
-                            <ul className={styles.trustedList}>
-                                <li className={styles.trustedListItem}>
-                                    <strong>Craftsmanship and Quality:</strong> Every saree is carefully selected to ensure premium fabric, fine stitching, and excellent finishing standards.
-                                </li>
-                                <li className={styles.trustedListItem}>
-                                    <strong>Wide Range of Designs:</strong> Our Surat collection includes silk sarees, designer sarees, printed sarees, party wear sarees, and wedding collections.
-                                </li>
-                                <li className={styles.trustedListItem}>
-                                    <strong>Customization Options:</strong> Choose from various colors, patterns, and fabrics to match your personal style and event needs.
-                                </li>
-                                <li className={styles.trustedListItem}>
-                                    <strong>Premium Fabric Selection:</strong> We focus on comfort, durability, and elegant designs suitable for weddings, festivals, office wear, and daily wear.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            {city && <LocationContent city={city} />}
 
             {/* Top Categories */}
             <section className={styles.categories} id="categories">
@@ -383,6 +356,7 @@ export default function HomeClient() {
                             <p className={styles.testimonialAuthor}>- Franchise Partner, Bangalore</p>
                         </div>
                     </div>
+
                     <div className={styles.textCenter}>
                         <Link href="/testimonials" className={`${styles.btn} ${styles.btnSecondary}`}>
                             See All Testimonials

@@ -521,6 +521,43 @@ Hero Section
 }
 
 /* ============================================
+   CITY LINKS SECTION (SEO)
+   ============================================ */
+
+.cityLinksSection {
+  padding: 4rem 0;
+  background: var(--bg-light);
+}
+
+.cityLinksGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.cityLinkItem {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background: var(--white);
+  color: var(--primary-dark);
+  border: 1px solid rgba(47, 87, 85, 0.15);
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cityLinkItem:hover {
+  background: var(--primary-teal);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(47, 87, 85, 0.25);
+}
+
+/* ============================================
    FINAL CTA SECTION
    ============================================ */
 
@@ -726,7 +763,8 @@ Hero Section
   .whyChooseUs,
   .testimonialsPreview,
   .finalCta,
-  .trustedSection {
+  .trustedSection,
+  .cityLinksSection {
     padding: 1.5rem 0;
   }
 

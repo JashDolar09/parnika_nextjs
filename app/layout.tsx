@@ -56,6 +56,7 @@ export default function RootLayout({
               "name": "Parnika India",
               "url": "https://parnikaindia.com",
               "logo": "https://parnikaindia.com/logo.png",
+              "areaServed": "India",
               "sameAs": [
                 "https://www.instagram.com/parnikaindia/",
                 "https://wa.me/917590048900"
